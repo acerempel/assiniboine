@@ -1,0 +1,4 @@
+root = true
+
+[*.{scss,php}]
+indent_style = tab
