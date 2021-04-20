@@ -33,6 +33,10 @@ h1.entry-title {
 	font-weight: var(--heading--font-weight-page-title);
 }
 
+.entry-header {
+	grid-column: 2 / 3;
+}
+
 /**
  * Entry Content
  */
@@ -43,6 +47,8 @@ h1.entry-title {
 }
 
 .entry-content {
+
+	grid-column: 2 / 3;
 
 	p {
 		word-wrap: break-word;
@@ -66,7 +72,7 @@ h1.entry-title {
 	color: var(--global--color-primary);
 	clear: both;
 	float: none;
-	font-size: var(--global--font-size-xs);
+	font-size: var(--global--font-size-sm);
 	display: block;
 
 	> span {
@@ -87,26 +93,21 @@ h1.entry-title {
 	}
 }
 
-// Extra specificity to override rules in _vertical-margins.scss
-.site-main > article > .entry-footer {
-	margin-top: var(--global--spacing-vertical);
-	padding-top: var(--global--spacing-unit);
-}
-
 body:not(.single) .site-main > article:last-of-type .entry-footer {
 	border-bottom: var(--separator--height) solid transparent;
 }
 
 .single .site-main > article > .entry-footer {
-	margin-top: calc(3.4 * var(--global--spacing-vertical));
-	margin-bottom: calc(3.4 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
 	padding-bottom: 0;
-	padding-top: calc(0.8 * var(--global--spacing-vertical));
+	padding-top: calc(1.25 * var(--global--spacing-vertical));
 	border-top: var(--global--border-width) solid var(--separator--border-color);
 	border-bottom: var(--separator--height) solid transparent;
+	line-height: calc(1.125 * var(--global--line-height-body));
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc(2 * var(--global--spacing-horizontal));
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	column-gap: calc(1 * var(--global--spacing-horizontal));
+	row-gap: var(--global--spacing-unit);
 
 	.post-taxonomies,
 	.full-size-link {

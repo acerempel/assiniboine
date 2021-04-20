@@ -68,13 +68,21 @@
 .site-main > article {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	display: grid;
+	grid-column-gap: var(--global--spacing-horizontal);
+	grid-row-gap: var(--global--spacing-unit);
+
+	@include media(desktop) {
+		grid-template-columns: 1fr var(--responsive--aligndefault-width) 1fr;
+		margin-left: calc(3 * var(--global--spacing-horizontal));
+		margin-right: calc(3 * var(--global--spacing-horizontal));
+	}
 }
 
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-vertical margin logic
  */
-.site-main > article > *, // apply vertical margins to article level
 .site-main > .not-found > *, // apply vertical margins to article level
 .entry-content > *,
 [class*="inner-container"] > *,

@@ -1,8 +1,8 @@
 // Do we need to serve a font? Add the @font-face styles here.
 
 .garamond {
-  --font-headings: 'EB Garamond';
-  --font-base: 'EB Garamond';
+  --font-headings: 'EB Garamond', serif;
+  --font-base: 'EB Garamond', serif;
 }
 
 @font-face {

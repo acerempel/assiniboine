@@ -1,8 +1,10 @@
-.singular .entry-header {
-	@extend %responsive-aligndefault-width;
-	border-bottom: var(--global--border-width) solid var(--global--color-border);
-	padding-bottom: calc(1.25 * var(--global--spacing-vertical));
-	margin-bottom: calc(2 * var(--global--spacing-vertical));
+.singular .site-main > article {
+	grid-row-gap: calc(2 * var(--global--spacing-vertical));
+}
+
+.singular .entry-content {
+	border-top: var(--global--border-width) solid var(--global--color-border);
+	padding-top: calc(1.25 * var(--global--spacing-vertical));
 }
 
 .home .entry-header {

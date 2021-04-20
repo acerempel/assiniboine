@@ -1,6 +1,6 @@
 {
-	"name": "twentytwentyone",
-	"version": "1.2.0",
+	"name": "assiniboine",
+	"version": "2.1.0",
 	"description": "Default WP Theme",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
@@ -8,10 +8,6 @@
 		"WordPress",
 		"Theme"
 	],
-	"bugs": {
-		"url": "https://core.trac.wordpress.org/"
-	},
-	"homepage": "https://wordpress.org/themes/twentytwentyone/",
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^3.0.0",
 		"@wordpress/eslint-plugin": "^8.0.1",

@@ -6,7 +6,8 @@
 a {
 	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-underline-offset: 3px;
+	text-underline-offset: 0.1875em;
+	text-decoration-thickness: 0.05em;
 	text-decoration-skip-ink: all;
 }
 

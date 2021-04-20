@@ -92,8 +92,8 @@ $baseline-unit: 0.5rem;
 	--global--spacing-vertical: #{2 * $baseline-unit}; // 30px.
 
 	/* Borders */
-	--global--border-width: 2.5px;
-	--global--border-radius: 2.5px;
+	--global--border-width: 2px;
+	--global--border-radius: 2px;
 
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
@@ -201,20 +201,20 @@ $baseline-unit: 0.5rem;
 	--pullquote--font-style: normal;
 	--pullquote--letter-spacing: var(--heading--letter-spacing-h4);
 	--pullquote--line-height: var(--global--line-height-heading);
-	--pullquote--border-width: 3px;
+	--pullquote--border-width: 2px;
 	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-xl);
+	--quote--font-size-large: var(--global--font-size-lg);
 	--quote--font-style: normal;
-	--quote--font-weight: 700;
+	--quote--font-weight: normal;
 	--quote--font-weight-strong: bolder;
 	--quote--font-style-large: normal;
-	--quote--font-style-cite: normal;
-	--quote--line-height: var(--global--line-height-body);
+	--quote--font-style-cite: italic;
+	--quote--line-height: calc(0.875 * var(--global--line-height-body));
 	--quote--line-height-large: 1.35;
 
 	--separator--border-color: var(--global--color-border);
@@ -226,10 +226,10 @@ $baseline-unit: 0.5rem;
 	--table--has-background-text-color: var(--global--color-dark-gray);
 
 	/* Widgets */
-	--widget--line-height-list: 1.9;
-	--widget--line-height-title: 1.4;
+	--widget--line-height-list: 2;
+	--widget--line-height-title: 1.5;
 	--widget--font-weight-title: 700;
-	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
+	--widget--spacing-menu: calc(0.666 * var(--global--spacing-unit));
 
 	/* Admin-bar height */
 	--global--admin-bar--height: 0;

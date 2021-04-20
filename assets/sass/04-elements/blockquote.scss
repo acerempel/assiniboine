@@ -1,5 +1,5 @@
 blockquote {
-	padding: 0;
+	padding: 0 var(--global--spacing-horizontal) 0 var(--global--spacing-horizontal);
 	position: relative;
 	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
