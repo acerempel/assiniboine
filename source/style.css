@@ -1,0 +1,27 @@
+@import "./meta.css";
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+	b, strong {
+		font-weight: 700;
+	}
+
+	dnf, cite, em, i {
+		font-style: italic;
+	}
+
+	pre {
+		white-space: pre;
+		overflow-x: auto;
+	}
+
+	a {
+		cursor: pointer;
+		color: var(--wp--style--color--link, var(--global--color-primary));
+		text-underline-offset: 0.1875em;
+		text-decoration-thickness: 0.05em;
+		text-decoration-skip-ink: all;
+	}
+}

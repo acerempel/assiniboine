@@ -1,0 +1,14 @@
+run = pnpx
+
+rule sass
+  command = $run sass $in:$out --style=expanded --source-map
+
+rule rtlcss
+  command = $run rtlcss $in $out
+
+rule postcss
+  command = $run postcss $in -o $out
+
+build style-rtl.css: rtlcss style.css
+
+build style.css: postcss source/style.css | postcss.config.js tailwind.config.js
