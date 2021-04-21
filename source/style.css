@@ -41,8 +41,7 @@
 	}
 
 	.blog main {
-		@apply grid gap-x-16 gap-y-8 justify-items-center;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		@apply grid gap-x-16 gap-y-8 justify-items-center grid-cols-w96;
 		& > * { @apply max-w-144; }
 	}
 }

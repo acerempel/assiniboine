@@ -20,10 +20,19 @@ module.exports = {
         '128': '32rem',
         '144': '36rem',
       },
+      gridTemplateColumns: {
+        'w72': gridColsRepeat(18),
+        'w96': gridColsRepeat(24),
+        'w144': gridColsRepeat(36),
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
+}
+
+function gridColsRepeat(width) {
+  return `repeat(auto-fit, minmax(${width}rem, 1fr))`;
 }
