@@ -11,7 +11,15 @@ module.exports = {
     extend: {
       lineHeight: {
         '27/16': '1.6875rem'
-      }
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      maxWidth: {
+        '128': '32rem',
+        '144': '36rem',
+      },
     },
   },
   variants: {

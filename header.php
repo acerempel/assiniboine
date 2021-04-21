@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="m-6">
+<div id="page" class="my-6 mx-8 sm:mx-16">
 	<a class="sr-only focus:not-sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
 
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>

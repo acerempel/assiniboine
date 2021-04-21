@@ -40,14 +40,10 @@
 		}
 	}
 
-	.alignleft {
-		float: left;
-		@apply mr-2 mb-2;
-	}
-
-	.alignright {
-		float: right;
-		@apply ml-2 mb-2;
+	.blog main {
+		@apply grid gap-x-16 gap-y-8 justify-items-center;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		& > * { @apply max-w-144; }
 	}
 }
 
@@ -71,5 +67,23 @@
 
 	.hyphens {
 		hyphens: auto;
+	}
+
+	[aria-expanded = "true"] .hide-when-expanded {
+		display: none
+	}
+
+	[aria-expanded = "false"] .hide-when-collapsed {
+		display: none
+	}
+
+	.alignleft {
+		float: left;
+		@apply mr-2 mb-2;
+	}
+
+	.alignright {
+		float: right;
+		@apply ml-2 mb-2;
 	}
 }
