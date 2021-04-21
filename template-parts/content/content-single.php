@@ -12,7 +12,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="grid gap-x-8 grid-cols-sm-lg-sm justify-center">
+<div class="grid gap-x-8 gap-y-4 grid-cols-lg lg:grid-cols-sm-lg-sm justify-center">
 
 	<header class="entry-header mb-8 grid-area-header">
 		<?php the_title( '<h1 class="entry-title text-4xl">', '</h1>' ); ?>

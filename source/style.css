@@ -52,6 +52,12 @@
 }
 
 @layer utilities {
+	.grid-cols-lg {
+		grid-template-columns: minmax(0, 36rem);
+		grid-template-areas:
+			"header" "footer" "main";
+	}
+
 	.grid-cols-sm-lg-sm {
 		grid-template-columns: minmax(0, 18rem) 36rem 18rem;
 		grid-template-areas:
