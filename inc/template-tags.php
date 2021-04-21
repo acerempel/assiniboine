@@ -132,7 +132,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
+					'<span class="sr-only">' . get_the_title() . '</span>'
 				),
 				'<p class="edit-link">',
 				'</p>'

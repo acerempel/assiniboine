@@ -242,7 +242,7 @@ class Twenty_Twenty_One_SVG_Icons {
 		foreach ( $regex_map as $icon => $regex ) {
 			if ( preg_match( $regex, $uri ) ) {
 
-				return self::get_svg( 'social', $icon, $size ) . '<span class="screen-reader-text">';
+				return self::get_svg( 'social', $icon, $size ) . '<span class="sr-only">';
 			}
 		}
 		return null;

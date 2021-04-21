@@ -66,7 +66,7 @@ while ( have_posts() ) {
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
 						esc_html__( 'Edit %s', 'twentytwentyone' ),
-						'<span class="screen-reader-text">' . get_the_title() . '</span>'
+						'<span class="sr-only">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -77,7 +77,7 @@ while ( have_posts() ) {
 			$metadata = wp_get_attachment_metadata();
 			if ( $metadata ) {
 				printf(
-					'<span class="full-size-link"><span class="screen-reader-text">%1$s</span><a href="%2$s">%3$s &times; %4$s</a></span>',
+					'<span class="full-size-link"><span class="sr-only">%1$s</span><a href="%2$s">%3$s &times; %4$s</a></span>',
 					esc_html_x( 'Full size', 'Used before full size attachment link.', 'twentytwentyone' ), // phpcs:ignore WordPress.Security.EscapeOutput
 					esc_url( wp_get_attachment_url() ),
 					absint( $metadata['width'] ),
@@ -91,7 +91,7 @@ while ( have_posts() ) {
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
 						esc_html__( 'Edit %s', 'twentytwentyone' ),
-						'<span class="screen-reader-text">' . get_the_title() . '</span>'
+						'<span class="sr-only">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span><br>'

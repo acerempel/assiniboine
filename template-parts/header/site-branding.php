@@ -10,7 +10,7 @@
 $blog_info    = get_bloginfo( 'name' );
 $description  = get_bloginfo( 'description', 'display' );
 $show_title   = ( true === get_theme_mod( 'display_title_and_tagline', true ) );
-$header_class = $show_title ? 'site-title' : 'screen-reader-text';
+$header_class = $show_title ? 'site-title' : 'sr-only';
 
 ?>
 
