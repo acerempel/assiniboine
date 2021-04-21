@@ -15,15 +15,18 @@ module.exports = {
       spacing: {
         '128': '32rem',
         '144': '36rem',
+        'prose': 'var(--width-prose)',
       },
       maxWidth: {
         '128': '32rem',
         '144': '36rem',
+        'prose': 'var(--width-prose)',
       },
       gridTemplateColumns: {
         'w72': gridColsRepeat(18),
         'w96': gridColsRepeat(24),
         'w144': gridColsRepeat(36),
+        'prose': gridColsRepeat('var(--width-prose)'),
       },
     },
   },

@@ -6,6 +6,7 @@
 @layer base {
 	body {
 		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
+		--width-prose: 36rem;
 	}
 
 	b, strong {
@@ -36,25 +37,25 @@
 		@apply text-lg space-y-6 leading-normal hyphens;
 
 		blockquote {
-			@apply px-4 leading-snug;
+			@apply px-6 leading-snug;
 		}
 	}
 
 	.blog main {
 		@apply grid gap-x-16 gap-y-8 justify-items-center grid-cols-w96;
-		& > * { @apply max-w-144; }
+		& > * { @apply max-w-prose; }
 	}
 }
 
 @layer utilities {
 	.grid-cols-lg {
-		grid-template-columns: minmax(0, 36rem);
+		grid-template-columns: minmax(0, var(--width-prose));
 		grid-template-areas:
 			"header" "footer" "main";
 	}
 
 	.grid-cols-sm-lg-sm {
-		grid-template-columns: minmax(0, 18rem) 36rem 18rem;
+		grid-template-columns: minmax(0, 18rem) var(--width-prose) 18rem;
 		grid-template-areas:
 			"none header header"
 			"none main footer";
