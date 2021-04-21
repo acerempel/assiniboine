@@ -141,8 +141,6 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 			if ( has_category() || has_tag() ) {
 
-				echo '<div class="post-taxonomies">';
-
 				/* translators: Used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 				if ( $categories_list ) {
@@ -158,11 +156,10 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: List of tags. */
-						'<sp class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</p>',
+						'<p class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</p>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
-				echo '</div>';
 			}
 		}
 	}

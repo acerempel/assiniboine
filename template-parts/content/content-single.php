@@ -14,12 +14,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="grid gap-x-8 gap-y-4 grid-cols-lg lg:grid-cols-sm-lg-sm justify-center">
 
-	<header class="entry-header mb-8 grid-area-header">
+	<header class="entry-header grid-area-header">
 		<?php the_title( '<h1 class="entry-title text-4xl">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<footer class="entry-footer text-base leading-27/16 grid-area-footer">
+	<footer class="
+		entry-footer
+		text-base leading-27/16
+		grid-area-footer grid grid-cols-2 gap-x-4 lg:block">
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
