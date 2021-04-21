@@ -14,16 +14,16 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="grid gap-x-8 grid-cols-sm-lg-sm justify-center">
 
-	<header class="entry-header mb-8 col-start-2 col-end-4">
+	<header class="entry-header mb-8 grid-area-header">
 		<?php the_title( '<h1 class="entry-title text-4xl">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<footer class="entry-footer text-base leading-27/16 col-start-3 col-end-4 row-start-2">
+	<footer class="entry-footer text-base leading-27/16 grid-area-footer">
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<div class="entry-content hyphens col-start-2 col-end-3 row-start-2">
+	<div class="entry-content hyphens grid-area-main">
 		<?php
 		the_content();
 
