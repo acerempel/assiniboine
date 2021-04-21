@@ -82,30 +82,30 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
 			}
 
+			echo '<p>';
 			// Posted on.
 			twenty_twenty_one_posted_on();
+			echo '</p>';
 
 			// Edit post link.
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
+					'<span class="sr-only">' . get_the_title() . '</span>'
 				),
-				'<span class="edit-link">',
-				'</span><br>'
+				'<p class="edit-link">',
+				'</p>'
 			);
 
 			if ( has_category() || has_tag() ) {
-
-				echo '<div class="post-taxonomies">';
 
 				/* translators: Used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
+						'<p class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </p>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -115,19 +115,18 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
+						'<p class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</p>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
-				echo '</div>';
 			}
 		} else {
 
 			echo '<div class="posted-by">';
 			// Posted on.
-			twenty_twenty_one_posted_on();
+			echo '<p>'; twenty_twenty_one_posted_on(); echo '</p>';
 			// Posted by.
-			twenty_twenty_one_posted_by();
+			echo '<p>'; twenty_twenty_one_posted_by(); echo '</p>';
 			// Edit post link.
 			edit_post_link(
 				sprintf(
@@ -135,8 +134,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
-				'<span class="edit-link">',
-				'</span>'
+				'<p class="edit-link">',
+				'</p>'
 			);
 			echo '</div>';
 
@@ -149,7 +148,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
+						'<p class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </p>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -159,7 +158,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
+						'<sp class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</p>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}

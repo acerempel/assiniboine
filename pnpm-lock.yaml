@@ -11,7 +11,7 @@ specifiers:
   postcss: ^8.2.10
   postcss-cli: ^8.0.0
   postcss-import: ^14.0.1
-  postcss-nested: ^4.2.1
+  postcss-nested: ^4.2.3
   rtlcss: ^2.6.1
   tailwindcss: ^2.1.1
 
@@ -1423,10 +1423,6 @@ packages:
     engines: {node: '>=0.8.19'}
     dev: true
 
-  /indexes-of/1.0.1:
-    resolution: {integrity: sha1-8w9xbI4r00bHtn0985FVZqfAVgc=}
-    dev: true
-
   /inflight/1.0.6:
     resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=}
     dependencies:
@@ -2140,7 +2136,7 @@ packages:
     resolution: {integrity: sha512-rOv0W1HquRCamWy2kFl3QazJMMe1ku6rCFoAAH+9AcxdbpDeBr6k968MLWuLjvjMcGEip01ak09hKOEgpK9hvw==}
     dependencies:
       postcss: 7.0.35
-      postcss-selector-parser: 6.0.4
+      postcss-selector-parser: 6.0.5
     dev: true
 
   /postcss-nested/5.0.5_postcss@8.2.10:
@@ -2166,16 +2162,6 @@ packages:
       lodash.groupby: 4.6.0
       lodash.sortby: 4.7.0
       postcss: 8.2.10
-    dev: true
-
-  /postcss-selector-parser/6.0.4:
-    resolution: {integrity: sha512-gjMeXBempyInaBqpp8gODmwZ52WaYsVOsfr4L4lDQ7n3ncD6mEyySiDtgzCT+NYC0mmeOLvtsF8iaEf0YT6dBw==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      indexes-of: 1.0.1
-      uniq: 1.0.1
-      util-deprecate: 1.0.2
     dev: true
 
   /postcss-selector-parser/6.0.5:
@@ -2728,10 +2714,6 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /uniq/1.0.1:
-    resolution: {integrity: sha1-sxxa6CVIRKOoKBVBzisEuGWnNP8=}
     dev: true
 
   /universalify/2.0.0:

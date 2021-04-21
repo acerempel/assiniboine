@@ -12,13 +12,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="grid gap-x-8 grid-cols-sm-lg-sm justify-center">
 
-	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header mb-8 col-start-2 col-end-4">
+		<?php the_title( '<h1 class="entry-title text-4xl">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<footer class="entry-footer text-base leading-27/16 col-start-3 col-end-4 row-start-2">
+		<?php twenty_twenty_one_entry_meta_footer(); ?>
+	</footer><!-- .entry-footer -->
+
+	<div class="entry-content hyphens col-start-2 col-end-3 row-start-2">
 		<?php
 		the_content();
 
@@ -33,12 +38,9 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
-
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
 	<?php endif; ?>
 
+</div>
 </article><!-- #post-<?php the_ID(); ?> -->

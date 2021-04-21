@@ -4,6 +4,10 @@
 @tailwind components;
 
 @layer base {
+	body {
+		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
+	}
+
 	b, strong {
 		font-weight: 700;
 	}
@@ -20,8 +24,46 @@
 	a {
 		cursor: pointer;
 		color: var(--wp--style--color--link, var(--global--color-primary));
+		text-decoration: underline;
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;
 		text-decoration-skip-ink: all;
+	}
+}
+
+@layer components {
+	.entry-content {
+		@apply text-lg space-y-6 leading-normal;
+
+		blockquote {
+			@apply px-4 leading-snug;
+		}
+	}
+
+	.alignleft {
+		float: left;
+		@apply mr-2 mb-2;
+	}
+
+	.alignright {
+		float: right;
+		@apply ml-2 mb-2;
+	}
+}
+
+@layer utilities {
+	.grid-cols-sm-lg-sm {
+		grid-template-columns: 18rem 36rem 18rem;
+		grid-template-areas:
+			"none header header"
+			"none main footer";
+	}
+
+	.grid-area-main { grid-area: main }
+	.grid-area-header { grid-area: header }
+	.grid-area-footer { grid-area: footer }
+
+	.hyphens {
+		hyphens: auto;
 	}
 }
