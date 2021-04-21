@@ -33,7 +33,7 @@
 
 @layer components {
 	.entry-content {
-		@apply text-lg space-y-6 leading-normal;
+		@apply text-lg space-y-6 leading-normal hyphens;
 
 		blockquote {
 			@apply px-4 leading-snug;
