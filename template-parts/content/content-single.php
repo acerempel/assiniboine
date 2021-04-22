@@ -15,7 +15,7 @@
 <div class="grid gap-x-8 gap-y-4 grid-cols-lg lg:grid-cols-sm-lg-sm justify-center">
 
 	<header class="entry-header grid-area-header">
-		<?php the_title( '<h1 class="entry-title text-4xl">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
