@@ -41,6 +41,26 @@
 		}
 	}
 
+	.nav-links {
+		@apply flex justify-around flex-wrap;
+	}
+
+	.meta-nav {
+		@apply flex;
+	}
+
+	.nav-previous {
+		.meta-nav { @apply justify-start; }
+		.svg-icon { @apply mr-4; }
+		.post-title { @apply ml-10; }
+	}
+
+	.nav-next {
+		.meta-nav { @apply justify-end; }
+		.svg-icon { @apply ml-4; }
+		.post-title { @apply mr-10; }
+	}
+
 	.blog main {
 		@apply grid gap-x-16 gap-y-8 justify-items-center grid-cols-w96;
 		& > * { @apply max-w-prose; }
@@ -85,5 +105,9 @@
 	.alignright {
 		float: right;
 		@apply ml-2 mb-2;
+	}
+
+	.screen-reader-text {
+		@apply sr-only;
 	}
 }
