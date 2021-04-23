@@ -10,6 +10,7 @@
 		--width-prose: 36rem;
 		--colour-primary: #262626;
 		--colour-secondary: #525252;
+		--colour-tertiary: #A1A1AA;
 		--colour-accent: #B45309;
 		color: var(--colour-primary);
 	}
@@ -86,13 +87,13 @@
 
 	.singular .entry-title { @apply text-4xl }
 
-	.site-title { @apply text-2xl text-center font-semibold }
+	.site-title { @apply text-2xl text-center font-medium }
 
 	.home .site-title { @apply text-4xl font-medium }
 
 	.primary-navigation {
 		@apply font-medium;
-		[aria-current = "page"] { @apply font-bold }
+		[aria-current = "page"] { @apply font-bold tracking-wide }
 		.menu-item { @apply px-6 py-1 }
 	}
 
@@ -110,6 +111,13 @@
 			&::after { content: ")." }
 		}
 	}
+
+	.comment, .comment-content, .comment-body { @apply space-y-4 }
+	.comment-list {
+		@apply space-y-6 divide-y-2 divide-secondary;
+		& > * { @apply pt-6 }
+	}
+	.children { @apply ml-6 space-y-6 }
 
 }
 

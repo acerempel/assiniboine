@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: 'var(--colour-primary)',
         secondary: 'var(--colour-secondary)',
+        tertiary: 'var(--colour-tertiary)',
         accent: 'var(--colour-accent)',
       },
       lineHeight: {

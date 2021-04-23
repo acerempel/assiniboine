@@ -24,13 +24,13 @@ if ( post_password_required() ) {
 $twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area max-w-prose mt-8 mx-auto <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments" class="comments-area max-w-prose mt-8 border-t-8 border-tertiary pt-6 mx-auto <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
 	if ( have_comments() ) :
 		;
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title text-xl font-semibold">
 			<?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
 				<?php esc_html_e( '1 comment', 'twentytwentyone' ); ?>
 			<?php else : ?>
@@ -85,7 +85,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		array(
 			'logged_in_as'       => null,
 			'title_reply'        => esc_html__( 'Leave a comment', 'twentytwentyone' ),
-			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-xl font-medium">',
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-xl font-semibold">',
 			'title_reply_after'  => '</h2>',
 		)
 	);
