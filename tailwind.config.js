@@ -40,6 +40,9 @@ module.exports = {
         'w144': gridColsRepeat(36),
         'prose': gridColsRepeat('var(--width-prose)'),
       },
+      outline: {
+        'emerald-600': [`2px dotted ${colours.indigo['600']}`, '2px']
+      }
     },
   },
   variants: {

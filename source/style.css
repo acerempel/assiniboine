@@ -41,7 +41,20 @@
 		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
 		textarea {
 			@apply text-lg p-1 border-2 rounded-sm border-grey-600;
-			&:focus { @apply ring-emerald-400; }
+			&:focus {
+				@apply
+					ring-0 ring-transparent
+					border-grey-600 outline-emerald-600;
+			}
+		}
+
+		button, [type = "button"], [type = "reset"], [type = "submit"] {
+			@apply
+				px-3.5 py-1.5 rounded
+				border-4 border-emerald-800 bg-emerald-100
+				font-medium;
+			&:focus { @apply outline-emerald-600; }
+			&:active { @apply border-emerald-900 bg-emerald-200 }
 		}
 	}
 
@@ -116,7 +129,7 @@
 	}
 
 	.primary-navigation {
-		@apply font-medium;
+		@apply font-medium text-lg;
 		[aria-current = "page"] { @apply font-bold tracking-wide }
 		.menu-item { @apply px-6 py-1 }
 	}
@@ -158,7 +171,7 @@
 	}
 
 	.grid-cols-sm-lg-sm {
-		grid-template-columns: minmax(0, 18rem) var(--width-prose) 18rem;
+		grid-template-columns: minmax(0, 14rem) var(--width-prose) 14rem;
 		grid-template-areas:
 			"none header header"
 			"none main footer";
@@ -170,7 +183,7 @@
 
 	.thick-top-border {
 		@apply
-			border-t-8 border-emerald-600 border-opacity-30
+			border-t-8 border-emerald-600 border-opacity-80
 			pt-6 mt-8;
 	}
 
