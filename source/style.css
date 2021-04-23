@@ -8,6 +8,10 @@
 	body {
 		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
 		--width-prose: 36rem;
+		--colour-primary: #262626;
+		--colour-secondary: #525252;
+		--colour-accent: #B45309;
+		color: var(--colour-primary);
 	}
 
 	b, strong {
@@ -25,12 +29,21 @@
 
 	a {
 		cursor: pointer;
-		color: var(--wp--style--color--link, var(--global--color-primary));
+		color: var(--wp--style--color--link, var(--colour-accent));
 		text-decoration: underline;
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;
 		text-decoration-skip-ink: all;
 	}
+
+	form {
+		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
+		textarea {
+			@apply p-1 border-2 rounded-sm border-secondary;
+			&:focus { @apply outline-black; }
+		}
+	}
+
 }
 
 @layer components {

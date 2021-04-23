@@ -9,6 +9,11 @@ module.exports = {
       'xl': '1280px',
     },
     extend: {
+      colors: {
+        primary: 'var(--colour-primary)',
+        secondary: 'var(--colour-secondary)',
+        accent: 'var(--colour-accent)',
+      },
       lineHeight: {
         '27/16': '1.6875rem'
       },
@@ -33,7 +38,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
 
 function gridColsRepeat(width) {
