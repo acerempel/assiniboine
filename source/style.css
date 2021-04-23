@@ -39,10 +39,12 @@
 	form {
 		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
 		textarea {
-			@apply p-1 border-2 rounded-sm border-secondary;
+			@apply text-lg p-1 border-2 rounded-sm border-secondary;
 			&:focus { @apply outline-black; }
 		}
 	}
+
+	textarea { width: 100%; }
 
 }
 
@@ -93,6 +95,22 @@
 		[aria-current = "page"] { @apply font-bold }
 		.menu-item { @apply px-6 py-1 }
 	}
+
+	.comment-form {
+		@apply grid sm:grid-cols-2 gap-y-2 gap-x-4;
+		[class *= "comment-form-"] {
+			@apply flex flex-col gap-y-1;
+		}
+		.comment-form-comment, .comment-notes { grid-column: 1 / -1; }
+		.comment-form-cookies-consent {
+			@apply flex-row gap-x-2 pt-5;
+		}
+		.comment-notes .required {
+			&::before { content: "with an asterisk (" }
+			&::after { content: ")." }
+		}
+	}
+
 }
 
 @layer utilities {
