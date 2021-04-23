@@ -9,15 +9,16 @@
 		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
 		--width-prose: 36rem;
 		--colour-primary: #262626;
-		--colour-secondary: #525252;
-		--colour-tertiary: #A1A1AA;
+		--colour-secondary: #78716C;
+		--colour-tertiary: #F59E0B;
 		--colour-accent: #B45309;
 		color: var(--colour-primary);
+		background-color: #FFFBEB;
 	}
 
-	b, strong {
-		font-weight: 700;
-	}
+	b, strong { font-weight: 700; }
+
+	p { hyphens: auto }
 
 	dnf, cite, em, i {
 		font-style: italic;
@@ -51,7 +52,7 @@
 
 @layer components {
 	.entry-content {
-		@apply text-lg space-y-6 leading-normal hyphens;
+		@apply text-lg space-y-6 leading-normal;
 
 		blockquote {
 			@apply px-6 leading-snug;
@@ -83,13 +84,37 @@
 		& > * { @apply max-w-prose; }
 	}
 
+	.site-header { @apply space-y-2; }
+
 	.entry-title { @apply text-2xl }
 
-	.singular .entry-title { @apply text-4xl }
-
-	.site-title { @apply text-2xl text-center font-medium }
+	.site-title {
+		@apply text-3xl text-center font-medium;
+		a { @apply text-secondary; }
+	}
 
 	.home .site-title { @apply text-4xl font-medium }
+
+	.entry-footer {
+		@apply
+			grid grid-cols-w40 gap-x-4
+			text-sm leading-normal font-medium;
+		margin-top: 3px;
+		row-gap: 3px;
+	}
+
+	.singular {
+		.entry {
+			@apply
+				grid gap-x-10 gap-y-6
+				grid-cols-lg lg:grid-cols-sm-lg-sm
+				justify-center;
+		}
+		.entry-title { @apply text-4xl }
+		.entry-header { grid-area: header }
+		.entry-footer { grid-area: footer; @apply lg:block }
+		.entry-content { grid-area: main }
+	}
 
 	.primary-navigation {
 		@apply font-medium;
@@ -113,9 +138,10 @@
 	}
 
 	.comment, .comment-content, .comment-body { @apply space-y-4 }
+	.comments-area { @apply space-y-6 }
 	.comment-list {
 		@apply space-y-6 divide-y-2 divide-secondary;
-		& > * { @apply pt-6 }
+		& > *:not(:first-child) { @apply pt-6 }
 	}
 	.children { @apply ml-6 space-y-6 }
 
@@ -134,10 +160,6 @@
 			"none header header"
 			"none main footer";
 	}
-
-	.grid-area-main { grid-area: main }
-	.grid-area-header { grid-area: header }
-	.grid-area-footer { grid-area: footer }
 
 	.hyphens {
 		hyphens: auto;

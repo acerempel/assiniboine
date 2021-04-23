@@ -29,6 +29,7 @@ module.exports = {
         'prose': 'var(--width-prose)',
       },
       gridTemplateColumns: {
+        'w40': gridColsRepeat(10),
         'w72': gridColsRepeat(18),
         'w96': gridColsRepeat(24),
         'w144': gridColsRepeat(36),
