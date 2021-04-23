@@ -12,8 +12,7 @@
 		--colour-secondary: #78716C;
 		--colour-tertiary: #F59E0B;
 		--colour-accent: #B45309;
-		color: var(--colour-primary);
-		background-color: #FFFBEB;
+		@apply text-grey-900 bg-ice-50;
 	}
 
 	b, strong { font-weight: 700; }
@@ -31,7 +30,7 @@
 
 	a {
 		cursor: pointer;
-		color: var(--wp--style--color--link, var(--colour-accent));
+		@apply text-emerald-700;
 		text-decoration: underline;
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;
@@ -41,8 +40,8 @@
 	form {
 		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
 		textarea {
-			@apply text-lg p-1 border-2 rounded-sm border-secondary;
-			&:focus { @apply outline-black; }
+			@apply text-lg p-1 border-2 rounded-sm border-grey-600;
+			&:focus { @apply ring-emerald-400; }
 		}
 	}
 
@@ -90,7 +89,7 @@
 
 	.site-title {
 		@apply text-3xl text-center font-medium;
-		a { @apply text-secondary; }
+		a { @apply text-grey-800; }
 	}
 
 	.home .site-title { @apply text-4xl font-medium }
@@ -98,7 +97,7 @@
 	.entry-footer {
 		@apply
 			grid grid-cols-w40 gap-x-4
-			text-sm leading-normal font-medium;
+			text-sm text-grey-600 leading-normal font-medium;
 		margin-top: 3px;
 		row-gap: 3px;
 	}
@@ -127,7 +126,9 @@
 		[class *= "comment-form-"] {
 			@apply flex flex-col gap-y-1;
 		}
-		.comment-form-comment, .comment-notes { grid-column: 1 / -1; }
+		.comment-form-comment, .comment-notes {
+			grid-column: 1 / -1;
+		}
 		.comment-form-cookies-consent {
 			@apply flex-row gap-x-2 pt-5;
 		}
@@ -137,10 +138,12 @@
 		}
 	}
 
-	.comment, .comment-content, .comment-body { @apply space-y-4 }
+	.comment, .comment-content, .comment-body {
+		@apply space-y-4
+	}
 	.comments-area { @apply space-y-6 }
 	.comment-list {
-		@apply space-y-6 divide-y-2 divide-secondary;
+		@apply space-y-6 divide-y-2 divide-grey-600;
 		& > *:not(:first-child) { @apply pt-6 }
 	}
 	.children { @apply ml-6 space-y-6 }
@@ -163,6 +166,12 @@
 
 	.hyphens {
 		hyphens: auto;
+	}
+
+	.thick-top-border {
+		@apply
+			border-t-8 border-emerald-600 border-opacity-30
+			pt-6 mt-8;
 	}
 
 	[aria-expanded = "true"] .hide-when-expanded {

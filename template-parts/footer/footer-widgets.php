@@ -9,7 +9,7 @@
 
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 
-	<aside class="widget-area">
+	<aside class="widget-area thick-top-border">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</aside><!-- .widget-area -->
 

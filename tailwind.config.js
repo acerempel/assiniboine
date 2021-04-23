@@ -1,3 +1,5 @@
+const colours = require('tailwindcss/colors');
+
 module.exports = {
   mode: 'jit',
   purge: ['./**/*.php', './source/extra-classes.txt'],
@@ -10,6 +12,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        grey: colours.trueGray,
+        ice: colours.blueGray,
+        emerald: colours.indigo,
         primary: 'var(--colour-primary)',
         secondary: 'var(--colour-secondary)',
         tertiary: 'var(--colour-tertiary)',

@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 $twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area max-w-prose mt-8 border-t-8 border-tertiary pt-6 mx-auto <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments" class="comments-area max-w-prose thick-top-border mx-auto <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
 	if ( have_comments() ) :
