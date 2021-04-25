@@ -8,11 +8,15 @@
 	body {
 		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
 		--width-prose: 36rem;
-		--colour-primary: #262626;
-		--colour-secondary: #78716C;
-		--colour-tertiary: #F59E0B;
-		--colour-accent: #B45309;
-		@apply text-grey-900 bg-ice-50;
+		--colour-primary: #1C1917;
+		--colour-secondary: #262626;
+		--colour-tertiary: #3F3F46;
+		--colour-accent-1: #9D174D;
+		--colour-accent-2: #BE185D;
+		--colour-interactive-1: #1E40AF;
+		--colour-interactive-2: #1D4ED8;
+		--colour-interactive-3: #2563EB;
+		@apply text-primary bg-grey-50;
 	}
 
 	b, strong { font-weight: 700; }
@@ -30,7 +34,7 @@
 
 	a {
 		cursor: pointer;
-		@apply text-emerald-700;
+		@apply text-interactive-1;
 		text-decoration: underline;
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;
@@ -40,21 +44,22 @@
 	form {
 		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
 		textarea {
-			@apply text-lg p-1 border-2 rounded-sm border-grey-600;
+			@apply text-lg p-1 border-2 rounded-sm border-tertiary;
 			&:focus {
 				@apply
 					ring-0 ring-transparent
-					border-grey-600 outline-emerald-600;
+					border-tertiary outline-interactive-1;
 			}
 		}
 
 		button, [type = "button"], [type = "reset"], [type = "submit"] {
 			@apply
 				px-3.5 py-1.5 rounded
-				border-2 border-emerald-800 bg-emerald-100
-				font-medium;
-			&:focus { @apply outline-emerald-600; }
-			&:active { @apply border-emerald-900 bg-emerald-200 }
+				border-2 border-interactive-3 border-opacity-80
+				bg-interactive-2 bg-opacity-80
+				font-medium text-gray-50;
+			&:focus { @apply outline-interactive-2; }
+			&:active { @apply border-interactive-2 bg-interactive-1 }
 		}
 	}
 
@@ -102,7 +107,7 @@
 
 	.site-title {
 		@apply text-3xl text-center font-medium;
-		a { @apply text-grey-800; }
+		a { @apply text-secondary; }
 	}
 
 	.home .site-title { @apply text-4xl font-medium }
@@ -110,7 +115,7 @@
 	.entry-footer {
 		@apply
 			grid grid-cols-w40 gap-x-4
-			text-sm text-grey-600 leading-normal font-medium;
+			text-sm text-tertiary leading-normal font-medium;
 		margin-top: 3px;
 		row-gap: 3px;
 	}
@@ -156,7 +161,7 @@
 	}
 	.comments-area { @apply space-y-6 }
 	.comment-list {
-		@apply space-y-6 divide-y-2 divide-grey-600;
+		@apply space-y-6 divide-y-2 divide-tertiary;
 		& > *:not(:first-child) { @apply pt-6 }
 	}
 	.children { @apply ml-6 space-y-6 }
@@ -183,7 +188,7 @@
 
 	.thick-top-border {
 		@apply
-			border-t-8 border-emerald-600 border-opacity-80
+			border-t-8 border-accent-1 border-opacity-80
 			pt-6 mt-8;
 	}
 

@@ -15,10 +15,14 @@ module.exports = {
         grey: colours.trueGray,
         ice: colours.blueGray,
         emerald: colours.indigo,
-        primary: 'var(--colour-primary)',
-        secondary: 'var(--colour-secondary)',
-        tertiary: 'var(--colour-tertiary)',
-        accent: 'var(--colour-accent)',
+        'primary': 'var(--colour-primary)',
+        'secondary': 'var(--colour-secondary)',
+        'tertiary': 'var(--colour-tertiary)',
+        'accent-1': 'var(--colour-accent-1)',
+        'accent-2': 'var(--colour-accent-2)',
+        'interactive-1': 'var(--colour-interactive-1)',
+        'interactive-2': 'var(--colour-interactive-2)',
+        'interactive-3': 'var(--colour-interactive-3)',
       },
       lineHeight: {
         '27/16': '1.6875rem'
@@ -41,7 +45,14 @@ module.exports = {
         'prose': gridColsRepeat('var(--width-prose)'),
       },
       outline: {
-        'emerald-600': [`2px dotted ${colours.indigo['600']}`, '2px']
+        'interactive-1': [
+          `2px dotted var(--colour-interactive-1)`,
+          '2px'
+        ],
+        'interactive-2': [
+          `2px dotted var(--colour-interactive-2)`,
+          '2px'
+        ],
       }
     },
   },
