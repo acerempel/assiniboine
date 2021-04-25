@@ -77,7 +77,7 @@
 	}
 
 	.nav-links {
-		@apply flex justify-around flex-wrap;
+		@apply flex justify-between flex-wrap;
 	}
 
 	.meta-nav {
