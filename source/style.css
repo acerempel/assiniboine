@@ -51,7 +51,7 @@
 		button, [type = "button"], [type = "reset"], [type = "submit"] {
 			@apply
 				px-3.5 py-1.5 rounded
-				border-4 border-emerald-800 bg-emerald-100
+				border-2 border-emerald-800 bg-emerald-100
 				font-medium;
 			&:focus { @apply outline-emerald-600; }
 			&:active { @apply border-emerald-900 bg-emerald-200 }
