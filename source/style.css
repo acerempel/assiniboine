@@ -72,7 +72,7 @@
 		@apply text-lg space-y-6 leading-normal;
 
 		blockquote {
-			@apply px-6 leading-snug;
+			@apply px-6 leading-snug text-secondary;
 		}
 	}
 
