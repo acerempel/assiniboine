@@ -9,24 +9,12 @@
 	}
 
 	.nav-links {
-		@apply flex justify-between flex-wrap;
+		@apply
+      flex flex-wrap gap-x-6 gap-y-4
+      mt-6 mx-auto max-w-prose;
 	}
 
-	.meta-nav {
-		@apply flex;
-	}
-
-	.nav-previous {
-		.meta-nav { @apply justify-start; }
-		.svg-icon { @apply mr-4; }
-		.post-title { @apply ml-10; }
-	}
-
-	.nav-next {
-		.meta-nav { @apply justify-end; }
-		.svg-icon { @apply ml-4; }
-		.post-title { @apply mr-10; }
-	}
+  .nav-next { @apply ml-auto; }
 
 	.entry-title { @apply text-2xl }
 

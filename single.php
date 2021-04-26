@@ -33,16 +33,19 @@ while ( have_posts() ) :
 	}
 
 	// Previous/next post navigation.
-	$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
-	$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+	$twentytwentyone_next_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
+	$twentytwentyone_prev_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+
+	$twentytwentyone_next = '<span class="ml-4">' . $twentytwentyone_next_icon . '</span>';
+	$twentytwentyone_prev = '<span class="mr-4">' . $twentytwentyone_prev_icon . '</span>';
 
 	$twentytwentyone_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
 	$twentytwentyone_previous_label = esc_html__( 'Previous post', 'twentytwentyone' );
 
 	the_post_navigation(
 		array(
-			'next_text' => '<p class="meta-nav">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="post-title">%title</p>',
-			'prev_text' => '<p class="meta-nav">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="post-title">%title</p>',
+			'next_text' => '<p class="flex justify-end">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="mr-10">%title</p>',
+			'prev_text' => '<p class="flex justify-start">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="ml-10">%title</p>',
 		)
 	);
 endwhile; // End of the loop.
