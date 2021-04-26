@@ -20,6 +20,7 @@ module.exports = {
         'tertiary': 'var(--colour-tertiary)',
         'accent-1': 'var(--colour-accent-1)',
         'accent-2': 'var(--colour-accent-2)',
+        'accent-3': 'var(--colour-accent-3)',
         'interactive-1': 'var(--colour-interactive-1)',
         'interactive-2': 'var(--colour-interactive-2)',
         'interactive-3': 'var(--colour-interactive-3)',

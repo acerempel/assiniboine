@@ -24,9 +24,10 @@
 	}
 	.comments-area { @apply space-y-6 }
 	.comment-list {
-		@apply space-y-6 divide-y-2 divide-tertiary;
-		& > *:not(:first-child) { @apply pt-6 }
+		@apply space-y-8 divide-y-2 divide-accent-2;
+		& > *:not(:first-child) { @apply pt-8 }
 	}
-	.children { @apply ml-6 space-y-6 }
+
+	.children { @apply border-l-4 border-accent-3 pl-4 space-y-6 }
 
 }
