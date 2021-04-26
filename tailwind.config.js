@@ -30,14 +30,17 @@ module.exports = {
       spacing: {
         '128': '32rem',
         '144': '36rem',
+        '224': '56rem',
         'prose': 'var(--width-prose)',
       },
       maxWidth: {
         '128': '32rem',
         '144': '36rem',
+        '224': '56rem',
         'prose': 'var(--width-prose)',
       },
       gridTemplateColumns: {
+        'auto-2': 'auto auto',
         'w40': gridColsRepeat(10),
         'w72': gridColsRepeat(18),
         'w96': gridColsRepeat(24),
