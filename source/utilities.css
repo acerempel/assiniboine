@@ -19,7 +19,7 @@
 	.thick-top-border {
 		@apply
 			border-t-8 border-accent-1 border-opacity-80
-			pt-6 mt-8;
+			pt-6;
 	}
 
 	[aria-expanded = "true"] .hide-when-expanded {

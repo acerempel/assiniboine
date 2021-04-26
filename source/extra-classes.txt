@@ -1,3 +1,3 @@
 alignleft alignright
 meta-nav screen-reader-text svg-icon post-title
-nav-previous nav-next nav-links
+nav-previous nav-next nav-links post-navigation

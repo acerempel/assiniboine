@@ -44,8 +44,8 @@ while ( have_posts() ) :
 
 	the_post_navigation(
 		array(
-			'next_text' => '<p class="flex justify-end">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="mr-10">%title</p>',
-			'prev_text' => '<p class="flex justify-start">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="ml-10">%title</p>',
+			'next_text' => '<p class="flex justify-end">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="mr-10 font-semibold text-xl">%title</p>',
+			'prev_text' => '<p class="flex justify-start">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="ml-10 font-semibold text-xl">%title</p>',
 		)
 	);
 endwhile; // End of the loop.

@@ -8,10 +8,12 @@
 		}
 	}
 
+  .post-navigation {
+    @apply mx-auto max-w-224;
+  }
+
 	.nav-links {
-		@apply
-      flex flex-wrap gap-x-6 gap-y-4
-      mt-6 mx-auto max-w-prose;
+		@apply flex flex-wrap gap-x-6 gap-y-4;
 	}
 
   .nav-next { @apply ml-auto; }
@@ -25,6 +27,7 @@
 	}
 
 	.singular {
+    main { @apply space-y-8 }
 		.entry {
 			@apply
 				grid gap-x-10 gap-y-6
