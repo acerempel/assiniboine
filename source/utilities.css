@@ -40,7 +40,7 @@
 		@apply ml-2 mb-2;
 	}
 
-	.screen-reader-text {
+	.screen-reader-text:not(:focus):not(:focus-within) {
 		@apply sr-only;
 	}
 }
