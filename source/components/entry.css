@@ -33,9 +33,7 @@
 	.entry-footer {
 		@apply
 			grid grid-cols-w40 gap-x-4
-			text-sm text-tertiary leading-normal font-medium;
-		margin-top: 3px;
-		row-gap: 3px;
+			text-base text-tertiary leading-27/16;
 	}
 
 	.singular {
