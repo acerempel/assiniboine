@@ -1,0 +1,28 @@
+@layer base {
+
+	form {
+		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
+		textarea {
+			@apply text-lg p-1 border-2 rounded-sm border-tertiary;
+			&:focus {
+				@apply
+					ring-0 ring-transparent
+					border-tertiary outline-interactive-1;
+			}
+		}
+
+		button, [type = "button"],
+    [type = "reset"], [type = "submit"] {
+			@apply
+				px-3.5 py-1.5 rounded
+				border-2 border-interactive-3 border-opacity-80
+				bg-interactive-2 bg-opacity-80
+				font-medium text-gray-50;
+			&:focus { @apply outline-interactive-2; }
+			&:active { @apply border-interactive-2 bg-interactive-1 }
+		}
+	}
+
+	textarea { width: 100%; }
+
+}

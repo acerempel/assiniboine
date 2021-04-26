@@ -1,0 +1,29 @@
+@layer components {
+	.comment-form {
+		@apply grid sm:grid-cols-2 gap-y-2 gap-x-4;
+		[class *= "comment-form-"] {
+			@apply flex flex-col gap-y-1;
+		}
+		.comment-form-comment, .comment-notes {
+			grid-column: 1 / -1;
+		}
+		.comment-form-cookies-consent {
+			@apply flex-row gap-x-2 pt-5;
+		}
+		.comment-notes .required {
+			&::before { content: "with an asterisk (" }
+			&::after { content: ")." }
+		}
+	}
+
+	.comment, .comment-content, .comment-body {
+		@apply space-y-4
+	}
+	.comments-area { @apply space-y-6 }
+	.comment-list {
+		@apply space-y-6 divide-y-2 divide-tertiary;
+		& > *:not(:first-child) { @apply pt-6 }
+	}
+	.children { @apply ml-6 space-y-6 }
+
+}

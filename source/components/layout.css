@@ -1,0 +1,23 @@
+@layer components {
+
+	.site-header { @apply space-y-2; }
+
+	.blog main {
+		@apply grid gap-x-16 gap-y-8 justify-items-center grid-cols-1 sm:grid-cols-w96;
+		& > * { @apply max-w-prose; }
+	}
+
+	.site-title {
+		@apply text-3xl text-center font-medium;
+		a { @apply text-secondary; }
+	}
+
+	.home .site-title { @apply text-4xl font-medium }
+
+	.primary-navigation {
+		@apply font-medium text-lg;
+		[aria-current = "page"] { @apply font-bold tracking-wide }
+		.menu-item { @apply px-6 py-1 }
+	}
+
+}
