@@ -39,15 +39,19 @@ while ( have_posts() ) :
 	$assiniboine_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
 	$assiniboine_prev_label = esc_html__( 'Previous post', 'twentytwentyone' );
 
-	$assiniboine_next = '<span class="grid grid-cols-auto-2 items-center justify-items-end gap-x-2">';
-	$assiniboine_next .= '<span class="underline text-interactive-1">' . $assiniboine_next_label . '</span>';
-	$assiniboine_next .= '<span class="row-span-2 text-interactive-1">' . $twentytwentyone_next_icon . '</span>';
+	$assnbn_prevnext_classes =
+		'grid grid-cols-auto-2 items-center gap-x-2'
+		. ' p-2 bg-cyan-50 border-2 border-blue-500 rounded hover:bg-cyan-100 hover:border-blue-600';
+
+	$assiniboine_next = '<span class="' . $assnbn_prevnext_classes . ' pl-3 justify-items-end">';
+	$assiniboine_next .= '<span class="underline text-cyan-700">' . $assiniboine_next_label . '</span>';
+	$assiniboine_next .= '<span class="row-span-2 text-cyan-700">' . $twentytwentyone_next_icon . '</span>';
 	$assiniboine_next .= '<span class="font-semibold text-xl text-secondary">%title</span>';
 	$assiniboine_next .= '</span>';
 
-	$assiniboine_prev = '<span class="grid grid-cols-auto-2 items-center justify-items-start gap-x-2">';
-	$assiniboine_prev .= '<span class="row-span-2 text-interactive-1">' . $twentytwentyone_prev_icon . '</span>';
-	$assiniboine_prev .= '<span class="underline text-interactive-1">' . $assiniboine_prev_label . '</span>';
+	$assiniboine_prev = '<span class="' . $assnbn_prevnext_classes . ' pr-3 justify-items-start">';
+	$assiniboine_prev .= '<span class="row-span-2 text-cyan-700">' . $twentytwentyone_prev_icon . '</span>';
+	$assiniboine_prev .= '<span class="underline text-cyan-700">' . $assiniboine_prev_label . '</span>';
 	$assiniboine_prev .= '<span class="font-semibold text-xl text-secondary">%title</span>';
 	$assiniboine_prev .= '</span>';
 
