@@ -14,7 +14,9 @@ module.exports = {
       colors: {
         grey: colours.trueGray,
         ice: colours.blueGray,
-        emerald: colours.indigo,
+        emerald: colours.emerald,
+        teal: colours.teal,
+        indigo: colours.indigo,
         'primary': 'var(--colour-primary)',
         'secondary': 'var(--colour-secondary)',
         'tertiary': 'var(--colour-tertiary)',

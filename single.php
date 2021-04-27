@@ -36,16 +36,25 @@ while ( have_posts() ) :
 	$twentytwentyone_next_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
 	$twentytwentyone_prev_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
 
-	$twentytwentyone_next = '<span class="ml-4">' . $twentytwentyone_next_icon . '</span>';
-	$twentytwentyone_prev = '<span class="mr-4">' . $twentytwentyone_prev_icon . '</span>';
+	$assiniboine_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
+	$assiniboine_prev_label = esc_html__( 'Previous post', 'twentytwentyone' );
 
-	$twentytwentyone_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
-	$twentytwentyone_previous_label = esc_html__( 'Previous post', 'twentytwentyone' );
+	$assiniboine_next = '<span class="grid grid-cols-auto-2 items-center justify-items-end gap-x-2">';
+	$assiniboine_next .= '<span class="underline text-interactive-1">' . $assiniboine_next_label . '</span>';
+	$assiniboine_next .= '<span class="row-span-2 text-interactive-1">' . $twentytwentyone_next_icon . '</span>';
+	$assiniboine_next .= '<span class="font-semibold text-xl text-secondary">%title</span>';
+	$assiniboine_next .= '</span>';
+
+	$assiniboine_prev = '<span class="grid grid-cols-auto-2 items-center justify-items-start gap-x-2">';
+	$assiniboine_prev .= '<span class="row-span-2 text-interactive-1">' . $twentytwentyone_prev_icon . '</span>';
+	$assiniboine_prev .= '<span class="underline text-interactive-1">' . $assiniboine_prev_label . '</span>';
+	$assiniboine_prev .= '<span class="font-semibold text-xl text-secondary">%title</span>';
+	$assiniboine_prev .= '</span>';
 
 	the_post_navigation(
 		array(
-			'next_text' => '<p class="flex justify-end">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="mr-10 font-semibold text-xl">%title</p>',
-			'prev_text' => '<p class="flex justify-start">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="ml-10 font-semibold text-xl">%title</p>',
+			'next_text' => $assiniboine_next,
+			'prev_text' => $assiniboine_prev,
 		)
 	);
 endwhile; // End of the loop.

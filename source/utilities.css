@@ -40,6 +40,11 @@
 		@apply ml-2 mb-2;
 	}
 
+  .link-plain a {
+    text-decoration: none;
+    color: currentColor;
+  }
+
 	.screen-reader-text:not(:focus):not(:focus-within) {
 		@apply sr-only;
 	}

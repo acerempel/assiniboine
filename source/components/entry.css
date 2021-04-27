@@ -18,6 +18,8 @@
 
   .nav-next { @apply ml-auto; }
 
+  .nav-next, .nav-previous { @apply link-plain }
+
 	.entry-title { @apply text-2xl }
 
 	.entry-footer {
