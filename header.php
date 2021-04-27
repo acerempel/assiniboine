@@ -11,6 +11,15 @@
  * @since Twenty Twenty-One 1.0
  */
 
+$is_post_list = is_home() || is_archive() || is_search();
+
+$content_classes .= 'content-area mt-8 mx-4 sm:mx-8 lg:mx-16';
+
+$main_classes = 'site-main';
+
+if ( $is_post_list ) {
+	$main_classes .= ' max-w-prose mx-auto';
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
@@ -28,5 +37,5 @@
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 
 	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main mt-8 mx-4 sm:mx-8 lg:mx-16" role="main">
+		<div id="primary" class="<?php echo $content_classes; ?>">
+			<main id="main" class="<?php echo $main_classes; ?>" role="main">

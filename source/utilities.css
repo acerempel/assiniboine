@@ -48,4 +48,8 @@
 	.screen-reader-text:not(:focus):not(:focus-within) {
 		@apply sr-only;
 	}
+
+  .p-space-y-8 > :not(:first-child) {
+    padding-top: 2rem;
+  }
 }

@@ -41,6 +41,7 @@ if ( have_posts() ) {
 		);
 		?>
 	</div><!-- .search-result-count -->
+	<div class="space-y-8 divide-y-2 divide-indigo-500 p-space-y-8">
 	<?php
 	// Start the Loop.
 	while ( have_posts() ) {
@@ -53,6 +54,8 @@ if ( have_posts() ) {
 		 */
 		get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
 	} // End the loop.
+
+	echo '</div>';
 
 	// Previous/next page navigation.
 	twenty_twenty_one_the_posts_navigation();
