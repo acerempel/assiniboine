@@ -9,7 +9,7 @@
 	}
 
   .post-navigation {
-    @apply mx-auto max-w-224;
+    @apply mx-auto max-w-prose;
   }
 
 	.nav-links {

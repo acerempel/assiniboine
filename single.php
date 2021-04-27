@@ -27,11 +27,6 @@ while ( have_posts() ) :
 		);
 	}
 
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
-
 	// Previous/next post navigation.
 	$twentytwentyone_next_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
 	$twentytwentyone_prev_icon = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
@@ -61,6 +56,12 @@ while ( have_posts() ) :
 			'prev_text' => $assiniboine_prev,
 		)
 	);
+
+	// If comments are open or there is at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+
 endwhile; // End of the loop.
 
 get_footer();
