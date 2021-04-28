@@ -6,6 +6,14 @@
 		blockquote {
 			@apply px-6 leading-snug text-tertiary;
 		}
+
+    h2 {
+      @apply text-2xl font-medium mt-8 sm:mt-10;
+    }
+
+    h3 {
+      @apply text-xl font-semibold sm:mt-8;
+    }
 	}
 
   .post-navigation {
