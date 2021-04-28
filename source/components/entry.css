@@ -42,7 +42,7 @@
     main { @apply space-y-8 }
 		.entry {
 			@apply
-				grid gap-x-10 gap-y-0.5lh lg:gap-y-1lh
+				grid gap-x-10 gap-y-0.75lh lg:gap-y-1lh
 				grid-cols-lg lg:grid-cols-sm-lg-sm
 				justify-center;
 		}
@@ -53,7 +53,7 @@
       align-self: start;
       @apply
         lg:block
-        border-b pb-0.5lh mb-0.5lh border-grey-500
+        border-b pb-0.75lh border-grey-500
         lg:border-b-0 lg:pb-0 lg:border-l lg:pl-4;
     }
 		.entry-content { grid-area: main }

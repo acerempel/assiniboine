@@ -9,8 +9,8 @@
 
 $wrapper_classes  = 'site-header';
 $wrapper_classes .= ' flex flex-wrap items-center';
-$wrapper_classes .= ' px-4 md:px-6 lg:px-8 py-4 md:py-6 lg:py-8';
-$wrapper_classes .= ' indigo border-b-4 border-indigo-600';
+$wrapper_classes .= ' px-4 md:px-6 lg:px-8 py-2 lg:py-0.5lh';
+$wrapper_classes .= ' indigo';
 $wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
 $wrapper_classes .= ( true === get_theme_mod( 'display_title_and_tagline', true ) ) ? ' has-title-and-tagline' : '';
 $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
