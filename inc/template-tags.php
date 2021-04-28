@@ -122,7 +122,6 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			}
 		} else {
 
-			echo '<div class="posted-by">';
 			// Posted on.
 			echo '<p>'; twenty_twenty_one_posted_on(); echo '</p>';
 			// Posted by.
@@ -137,7 +136,6 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				'<p class="edit-link">',
 				'</p>'
 			);
-			echo '</div>';
 
 			if ( has_category() || has_tag() ) {
 
