@@ -20,14 +20,14 @@
 	}
 
 	.comment, .comment-content, .comment-body {
-		@apply space-y-4
+		@apply space-y-0.75lh
 	}
-	.comments-area { @apply space-y-6 }
+	.comments-area { @apply space-y-1lh }
 	.comment-list {
-		@apply space-y-8 divide-y-2 divide-accent-2;
+		@apply space-y-8 divide-y divide-grey-500;
 		& > *:not(:first-child) { @apply pt-8 }
 	}
 
-	.children { @apply border-l-4 border-accent-3 pl-4 space-y-6 }
+	.children { @apply border-l-8 border-grey-200 pl-4 space-y-1lh }
 
 }
