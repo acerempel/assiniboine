@@ -32,6 +32,7 @@ module.exports = {
         'primary': 'var(--primary-colour)',
         'secondary': 'var(--secondary-colour)',
         'tertiary': 'var(--tertiary-colour)',
+        'link': 'var(--link-colour)',
         'dark': 'var(--bg-colour-dark)',
         'accent-1': 'var(--colour-accent-1)',
         'accent-2': 'var(--colour-accent-2)',
