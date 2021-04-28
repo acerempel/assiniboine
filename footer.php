@@ -16,6 +16,11 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
+	<div class="
+		py-6 lg:py-8 px-6 mt-8
+		teal border-t-4 border-teal-700
+	">
+
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -65,6 +70,8 @@
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
+	</div>
 
 </div><!-- #page -->
 

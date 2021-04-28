@@ -12,16 +12,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        grey: colours.trueGray,
+        grey: colours.warmGray,
         ice: colours.blueGray,
         emerald: colours.emerald,
         teal: colours.teal,
         indigo: colours.indigo,
         cyan: colours.cyan,
-        blue: colours.clue,
-        'primary': 'var(--colour-primary)',
-        'secondary': 'var(--colour-secondary)',
-        'tertiary': 'var(--colour-tertiary)',
+        blue: colours.blue,
+        'primary': 'var(--primary-colour)',
+        'secondary': 'var(--secondary-colour)',
+        'tertiary': 'var(--tertiary-colour)',
+        'dark': 'var(--bg-colour-dark)',
         'accent-1': 'var(--colour-accent-1)',
         'accent-2': 'var(--colour-accent-2)',
         'accent-3': 'var(--colour-accent-3)',
@@ -53,12 +54,8 @@ module.exports = {
         'prose': gridColsRepeat('var(--width-prose)'),
       },
       outline: {
-        'interactive-1': [
-          `2px dotted var(--colour-interactive-1)`,
-          '2px'
-        ],
-        'interactive-2': [
-          `2px dotted var(--colour-interactive-2)`,
+        'button': [
+          `2px dotted var(--button-colour-light)`,
           '2px'
         ],
       }
@@ -68,7 +65,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('./source/colour-zones'),
   ],
 }
 

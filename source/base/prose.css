@@ -2,16 +2,7 @@
 	body {
 		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
 		--width-prose: 36rem;
-		--colour-primary: #1C1917;
-		--colour-secondary: #262626;
-		--colour-tertiary: #3F3F46;
-		--colour-accent-1: #115E59;
-		--colour-accent-2: #0F766E;
-    --colour-accent-3: #059669;
-		--colour-interactive-1: #1E40AF;
-		--colour-interactive-2: #1D4ED8;
-		--colour-interactive-3: #2563EB;
-		@apply text-primary bg-grey-50;
+    @apply grey;
 	}
 
 	b, strong { font-weight: 700; }
@@ -29,7 +20,7 @@
 
 	a {
 		cursor: pointer;
-		@apply text-interactive-1;
+    color: var(--link-colour);
 		text-decoration: underline;
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;

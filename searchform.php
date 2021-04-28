@@ -23,7 +23,7 @@ $twentytwentyone_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . 
 <form
 	role="search" method="get"
 	<?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?>
-	class="search-form grid grid-cols-auto-2 gap-1"
+	class="search-form grid grid-cols-auto-2 gap-2"
 	action="<?php echo esc_url( home_url( '/' ) ); ?>"
 >
 	<label
