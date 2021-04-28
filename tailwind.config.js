@@ -65,6 +65,7 @@ module.exports = {
       gridTemplateColumns: {
         'auto-2': 'auto auto',
         'w40': gridColsRepeat(10),
+        'w48': gridColsRepeat(12),
         'w72': gridColsRepeat(18),
         'w96': gridColsRepeat(24),
         'w144': gridColsRepeat(36),

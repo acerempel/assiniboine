@@ -34,7 +34,7 @@
 
 	.entry-footer {
 		@apply
-			grid grid-cols-w40 gap-x-4
+			grid grid-cols-w48 gap-x-4
 			text-sm text-secondary;
 	}
 
@@ -53,7 +53,7 @@
       align-self: start;
       @apply
         lg:block
-        border-b pb-0.75lh border-grey-500
+        border-b pb-0.75lh mb-0.5lh border-grey-500
         lg:border-b-0 lg:pb-0 lg:border-l lg:pl-4;
     }
 		.entry-content { grid-area: main }
