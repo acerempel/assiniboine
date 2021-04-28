@@ -1,18 +1,20 @@
 @layer components {
 
 	.entry-content {
-		@apply text-lg space-y-6 leading-normal;
+		@apply text-lg space-y-1lh;
 
 		blockquote {
-			@apply px-6 leading-snug text-tertiary;
+			@apply px-6 leading-4/3 text-secondary;
 		}
 
     h2 {
-      @apply text-2xl font-medium mt-8 sm:mt-10;
+      @apply text-2xl font-medium;
+      @apply mt-2lh !important;
     }
 
     h3 {
-      @apply text-xl font-semibold sm:mt-8;
+      @apply text-xl font-semibold;
+      @apply mt-1.5lh !important;
     }
 	}
 
@@ -33,14 +35,14 @@
 	.entry-footer {
 		@apply
 			grid grid-cols-w40 gap-x-4
-			text-base text-tertiary leading-27/16;
+			text-base text-secondary;
 	}
 
 	.singular {
     main { @apply space-y-8 }
 		.entry {
 			@apply
-				grid gap-x-10 gap-y-6
+				grid gap-x-10 gap-y-1lh
 				grid-cols-lg lg:grid-cols-sm-lg-sm
 				justify-center;
 		}

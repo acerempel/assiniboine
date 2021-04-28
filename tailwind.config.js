@@ -10,6 +10,16 @@ module.exports = {
       'lg': '980px',
       'xl': '1280px',
     },
+    fontSize: {
+      sm: ['0.875rem', '1.28571428'],
+      base: ['1rem', '1.625'],
+      lg: ['1.125rem', '1.44444444'],
+      xl: ['1.25rem', '1.3'],
+      '2xl': ['1.5rem', '1.08333333'],
+      '3xl': ['1.875rem', '1.3'],
+      '4xl': ['2.25rem', '1.44444444'],
+      '5xl': ['3rem', '1.08333333'],
+    },
     extend: {
       colors: {
         grey: colours.warmGray,
@@ -31,9 +41,14 @@ module.exports = {
         'interactive-3': 'var(--colour-interactive-3)',
       },
       lineHeight: {
-        '27/16': '1.6875rem'
+        '13/9': '1.44444444',
+        '4/3': '1.33333333',
       },
       spacing: {
+        '0.5lh': '0.8125rem',
+        '1lh': '1.625rem',
+        '1.5lh': '2.4375rem',
+        '2lh': '3.25rem',
         '128': '32rem',
         '144': '36rem',
         '224': '56rem',
