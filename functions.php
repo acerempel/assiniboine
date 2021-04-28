@@ -117,9 +117,6 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Add support for Block Styles.
-		add_theme_support( 'wp-block-styles' );
-
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
 
