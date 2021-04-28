@@ -8,8 +8,4 @@
     }
 	}
 
-  .widget-title {
-    @apply text-2xl font-medium mb-2;
-  }
-
 }
