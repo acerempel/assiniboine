@@ -39,7 +39,7 @@ const colourZones = plugin(({ addComponents, theme }) => {
       '--button-colour-light': theme('colors.blue.600'),
       '--button-colour-text': theme('colors.gray.50'),
       '--primary-colour': theme('colors.grey.900'),
-      '--secondary-colour': theme('colors.grey.800'),
+      '--secondary-colour': theme('colors.grey.700'),
       'color': 'var(--primary-colour)',
       'background-color': 'var(--bg-colour-dark)',
     }

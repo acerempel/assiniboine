@@ -13,7 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header grid-cols-lg lg:grid-cols-sm-lg-sm grid-area-header">
+	<header class="entry-header">
 	<?php if ( ! is_front_page() ) : ?>
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
 			<?php twenty_twenty_one_post_thumbnail(); ?>
@@ -22,7 +22,7 @@
 	<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content grid-area-main">
+	<div class="entry-content">
 		<?php
 		the_content();
 
@@ -38,7 +38,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer grid-area-footer">
+		<footer class="entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(

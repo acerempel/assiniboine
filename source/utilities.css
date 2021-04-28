@@ -6,7 +6,7 @@
 	}
 
 	.grid-cols-sm-lg-sm {
-		grid-template-columns: minmax(0, 14rem) var(--width-prose) 14rem;
+		grid-template-columns: minmax(0, 16rem) var(--width-prose) 16rem;
 		grid-template-areas:
 			"none header header"
 			"none main footer";
