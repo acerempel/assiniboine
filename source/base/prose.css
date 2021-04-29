@@ -8,8 +8,6 @@
 
 	b, strong { font-weight: 700; }
 
-	p { hyphens: auto }
-
 	dnf, cite, em, i {
 		font-style: italic;
 	}
