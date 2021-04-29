@@ -12,7 +12,7 @@
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav
 		id="site-navigation"
-		class="primary-navigation font-medium text-lg"
+		class="primary-navigation small-caps links-no-underline tracking-wider font-medium text-xl"
 		role="navigation"
 		aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
 		<!-- .menu-button-container -->

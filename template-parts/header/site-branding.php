@@ -19,7 +19,7 @@ $header_class .= ' text-3xl lg:text-4xl text-secondary';
 	<div class="site-logo"><?php the_custom_logo(); ?></div>
 <?php endif; ?>
 
-<div class="site-branding pr-12">
+<div class="site-branding display pr-12">
 
 	<?php if ( has_custom_logo() && ! $show_title ) : ?>
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
@@ -39,7 +39,7 @@ $header_class .= ' text-3xl lg:text-4xl text-secondary';
 			<p class="<?php echo esc_attr( $header_class ); ?>"
 				><a
 					href="<?php echo esc_url( home_url( '/' ) ); ?>"
-					class="no-underline text-current"
+					class="links-no-underline text-current"
 				><?php echo esc_html( $blog_info ); ?></a
 			></p>
 		<?php endif; ?>

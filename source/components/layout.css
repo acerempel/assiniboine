@@ -1,7 +1,7 @@
 @layer components {
 
 	.primary-navigation {
-		[aria-current = "page"] { @apply font-bold tracking-wide }
+		[aria-current = "page"] { @apply font-bold tracking-wideish }
 		.menu-item {
       @apply pr-12 py-1;
       a { @apply text-current; }

@@ -45,6 +45,9 @@ module.exports = {
         '13/9': '1.44444444',
         '4/3': '1.33333333',
       },
+      letterSpacing: {
+        wideish: '0.0375em',
+      },
       spacing: {
         '0.5lh': '0.8125rem',
         '0.75lh': '1.21875rem',

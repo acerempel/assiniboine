@@ -1,8 +1,9 @@
 @layer base {
 	body {
-		font-family: 'EB Garamond', Garamond, Charter, Georgia, serif;
+    --fallback-fonts: Garamond, Charter, Georgia, serif;
+		font-family: 'EB Garamond', var(--fallback-fonts);
 		--width-prose: 36rem;
-    @apply grey;
+    @apply grey links-underline;
 	}
 
 	b, strong { font-weight: 700; }
@@ -21,9 +22,10 @@
 	a {
 		cursor: pointer;
     color: var(--link-colour);
-		text-decoration: underline;
+    text-decoration-line: var(--link-text-decoration);
 		text-underline-offset: 0.1875em;
 		text-decoration-thickness: 0.05em;
 		text-decoration-skip-ink: all;
+    &:hover, &:focus { text-decoration-line: underline; }
 	}
 }

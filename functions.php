@@ -398,6 +398,20 @@ function twenty_twenty_one_scripts() {
 	// RTL styles.
 	wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
 
+	$google_fonts_url = 'https://fonts.googleapis.com/css2';
+	$google_fonts_url .= '?family=EB+Garamond:ital,wght@0,400..600;1,400';
+	$google_fonts_url .= '&family=Cormorant+Garamond:wght@400;500;600;700';
+	$google_fonts_url .= '&family=Cormorant+SC:wght@400;500;600;700';
+	$google_fonts_url .= '&display=swap';
+
+	// Fonts.
+	wp_enqueue_style(
+		'assiniboine-google-fonts',
+		$google_fonts_url,
+		array(),
+		null,
+	);
+
 	// Print styles.
 	wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
@@ -445,6 +459,20 @@ function twenty_twenty_one_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
+
+/* Google fonts stuff */
+function assnbn_resource_hints( $urls, $rel_type ) {
+	if ( 'preconnect' === $rel_type ) {
+		$urls[] = array(
+			'href' => '//fonts.gstatic.com',
+			'crossorigin' => '',
+		);
+	} else if ( 'dns-prefetch' === $rel_type ) {
+		$urls[] = '//fonts.googleapis.com';
+	}
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'assnbn_resource_hints', 10, 2 );
 
 /**
  * Enqueue block editor script.

@@ -13,7 +13,7 @@
 
 $is_post_list = is_home() || is_archive() || is_search();
 
-$content_classes .= 'content-area mt-1lh mx-4 sm:mx-8 lg:mx-16';
+$content_classes = 'content-area mt-1lh mx-4 sm:mx-8 lg:mx-16';
 
 $main_classes = 'site-main';
 
