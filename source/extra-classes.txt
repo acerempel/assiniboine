@@ -3,3 +3,7 @@ meta-nav screen-reader-text svg-icon post-title
 nav-previous nav-next nav-links post-navigation
 children comment-meta comment-metadata
 comment-author fn avatar
+wp-block-latest-posts__list
+wp-block-latest-posts__post-date
+wp-block-latest-posts__post-author
+wp-block-latest-posts__post-excerpt

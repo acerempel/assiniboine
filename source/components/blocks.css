@@ -1,0 +1,30 @@
+@layer components {
+  .wp-block-latest-posts__post-date,
+  .wp-block-latest-posts__post-author {
+    @apply text-sm text-secondary;
+  }
+
+  .wp-block-latest-posts__post-date {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .wp-block-latest-posts__post-author {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .wp-block-latest-posts__post-excerpt {
+    grid-column: 1 / -1;
+  }
+
+  .wp-block-latest-posts__list {
+    @apply space-y-2;
+    & > * {
+      @apply grid gap-x-4;
+      grid-template-columns: auto auto;
+      justify-items: start;
+    }
+  }
+}
