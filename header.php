@@ -19,6 +19,7 @@ $main_classes = 'site-main';
 
 if ( $is_post_list ) {
 	$main_classes .= ' max-w-prose mx-auto';
+	$main_classes .= ' p-space-y-8 space-y-8 divide-y divide-secondary';
 }
 ?>
 <!doctype html>
