@@ -3,7 +3,7 @@
 	form {
 		input:not([type="submit"]):not([type="reset"]):not([type="range"]),
 		textarea {
-			@apply text-lg p-1 border-2 rounded-sm border-secondary;
+			@apply text-lg p-1 border rounded-sm border-secondary;
 			&:focus {
 				@apply
 					ring-0 ring-transparent
@@ -15,7 +15,7 @@
     [type = "reset"], [type = "submit"] {
 			@apply
 				px-3.5 py-1.5 rounded
-				border-2
+				border
 				font-medium;
       color: var(--button-colour-text);
       border-color: var(--button-colour-light);
