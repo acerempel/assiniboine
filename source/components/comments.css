@@ -2,7 +2,7 @@
 	.comment-form {
 		@apply grid sm:grid-cols-2 gap-y-4 gap-x-6;
 
-    label { @apply text-tertiary; }
+    label { @apply text-secondary; }
 
 		[class *= "comment-form-"] {
 			@apply flex flex-col gap-y-1;
@@ -27,6 +27,16 @@
 		@apply space-y-8 divide-y divide-grey-500;
 		& > *:not(:first-child) { @apply pt-8 }
 	}
+
+  .comment-meta {
+    display: flow-root;
+    .avatar { float: right; }
+  }
+  .comment-author {
+    @apply text-lg;
+    .fn { @apply font-semibold; }
+  }
+  .comment-metadata { @apply text-sm; }
 
 	.children { @apply border-l-8 border-grey-200 pl-4 space-y-1lh }
 

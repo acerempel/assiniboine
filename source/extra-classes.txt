@@ -1,4 +1,5 @@
 alignleft alignright
 meta-nav screen-reader-text svg-icon post-title
 nav-previous nav-next nav-links post-navigation
-children
+children comment-meta comment-metadata
+comment-author fn avatar
