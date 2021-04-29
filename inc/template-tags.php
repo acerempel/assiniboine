@@ -217,13 +217,22 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_the_posts_navigation() {
+		$prev_icon = is_rtl()
+			? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right', 24, 'inline align-text-top ml-1' )
+			: twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left', 24, 'inline align-text-top mr-1' );
+
+		$next_icon = is_rtl()
+			? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left', 24, 'inline align-text-top mr-1' )
+			: twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right', 24, 'inline align-text-top ml-1' );
+
+
 		the_posts_pagination(
 			array(
 				'before_page_number' => esc_html__( 'Page', 'twentytwentyone' ) . ' ',
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
+					$prev_icon,
 					wp_kses(
 						__( 'Newer <span class="nav-short">posts</span>', 'twentytwentyone' ),
 						array(
@@ -243,7 +252,7 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 							),
 						)
 					),
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
+					$next_icon,
 				),
 			)
 		);

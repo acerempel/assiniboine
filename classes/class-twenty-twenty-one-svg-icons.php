@@ -158,7 +158,7 @@ class Twenty_Twenty_One_SVG_Icons {
 	 *
 	 * @return string
 	 */
-	public static function get_svg( $group, $icon, $size ) {
+	public static function get_svg( $group, $icon, $size, $classes = '' ) {
 
 		if ( 'ui' === $group ) {
 			$arr = self::$icons;
@@ -182,7 +182,10 @@ class Twenty_Twenty_One_SVG_Icons {
 
 		$svg = '';
 		if ( array_key_exists( $icon, $arr ) ) {
-			$repl = sprintf( '<svg class="svg-icon" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $size, $size );
+			$repl = sprintf(
+				'<svg class="svg-icon %s" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ',
+				$classes, $size, $size,
+			);
 
 			$svg = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
 		}
