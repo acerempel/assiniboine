@@ -28,7 +28,7 @@ module.exports = {
         teal: colours.teal,
         indigo: colours.indigo,
         cyan: colours.cyan,
-        blue: colours.blue,
+        blue: colours.lightBlue,
         'primary': 'var(--primary-colour)',
         'secondary': 'var(--secondary-colour)',
         'tertiary': 'var(--tertiary-colour)',
