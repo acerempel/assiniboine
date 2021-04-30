@@ -48,7 +48,9 @@
 				grid-cols-lg lg:grid-cols-sm-lg-sm
 				justify-center;
 		}
-		.entry-title { @apply text-4xl lg:text-5xl }
+		.entry-title {
+      @apply display text-4xl lg:text-5xl
+    }
 		.entry-header { grid-area: header }
 		.entry-footer {
       grid-area: footer;
