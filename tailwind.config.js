@@ -34,12 +34,6 @@ module.exports = {
         'tertiary': 'var(--tertiary-colour)',
         'link': 'var(--link-colour)',
         'dark': 'var(--bg-colour-dark)',
-        'accent-1': 'var(--colour-accent-1)',
-        'accent-2': 'var(--colour-accent-2)',
-        'accent-3': 'var(--colour-accent-3)',
-        'interactive-1': 'var(--colour-interactive-1)',
-        'interactive-2': 'var(--colour-interactive-2)',
-        'interactive-3': 'var(--colour-interactive-3)',
       },
       lineHeight: {
         '13/9': '1.44444444',
