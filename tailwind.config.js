@@ -57,12 +57,14 @@ module.exports = {
         '128': '32rem',
         '144': '36rem',
         '224': '56rem',
+        '288': '72rem',
         'prose': 'var(--width-prose)',
       },
       maxWidth: {
         '128': '32rem',
         '144': '36rem',
         '224': '56rem',
+        '288': '72rem',
         'prose': 'var(--width-prose)',
       },
       gridTemplateColumns: {
