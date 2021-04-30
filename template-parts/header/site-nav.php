@@ -25,7 +25,7 @@
 				'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
 				'before' => '<span class="mr-10 py-0.5">',
 				'after' => '</span>',
-				'link_before' => '<span class="px-1 py-0.5 text-current">',
+				'link_before' => '<span class="px-1 py-0.5 text-primary">',
 				'link_after' => '</span>',
 				'fallback_cb'     => false,
 			)

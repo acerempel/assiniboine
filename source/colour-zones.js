@@ -2,10 +2,24 @@ const plugin = require('tailwindcss/plugin');
 
 const colourZones = plugin(({ addComponents, theme }) => {
   addComponents({
+    '.sapphire': {
+      '--bg-colour-dark': theme('colors.sapphire.deep'),
+      '--bg-colour-medium': theme('colors.sapphire.dark'),
+      '--link-colour': theme('colors.sapphire.lighter'),
+      '--button-colour-dark': theme('colors.sapphire.dark'),
+      '--button-colour-medium': theme('colors.sapphire.medium'),
+      '--button-colour-light': theme('colors.sapphire.light'),
+      '--button-colour-text': 'var(--link-colour)',
+      '--primary-colour': theme('colors.gray.50'),
+      '--secondary-colour': theme('colors.gray.100'),
+      'color': 'var(--primary-colour)',
+      'background-color': 'var(--bg-colour-dark)',
+    },
+
     '.teal': {
-      '--bg-colour-dark': theme('colors.teal.800'),
+      '--bg-colour-dark': theme('colors.teal.900'),
       '--bg-colour-medium': theme('colors.teal.700'),
-      '--link-colour': theme('colors.teal.100'),
+      '--link-colour': theme('colors.cyan.100'),
       '--button-colour-dark': theme('colors.teal.800'),
       '--button-colour-medium': theme('colors.teal.700'),
       '--button-colour-light': theme('colors.teal.100'),

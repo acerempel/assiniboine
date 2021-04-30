@@ -34,6 +34,14 @@ module.exports = {
         'tertiary': 'var(--tertiary-colour)',
         'link': 'var(--link-colour)',
         'dark': 'var(--bg-colour-dark)',
+        'medium': 'var(--bg-colour-medium)',
+        sapphire: {
+          deep: '#2e5c8c',
+          dark: '#255691',
+          medium: '#4681bf',
+          light: '#71aadf',
+          lighter: '#8fc3ee',
+        },
       },
       lineHeight: {
         '13/9': '1.44444444',
