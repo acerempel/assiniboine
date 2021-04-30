@@ -2,7 +2,7 @@
 @import "./tailwind.css";
 @import "./base/prose.css";
 @import "./base/forms.css";
-@import "./components/layout.css";
+@import "./components/navigation.css";
 @import "./components/entry.css";
 @import "./components/comments.css";
 @import "./components/blocks.css";
