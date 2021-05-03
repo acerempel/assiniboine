@@ -17,7 +17,8 @@ main = do
     mainCssFile %> \output -> do
       templateFiles <- getDirectoryFiles "" ["**/*.php"]
       cssFiles <- getDirectoryFiles "" ["source/**/*.css"]
-      need $ templateFiles <> cssFiles
+      let configFiles = ["postcss.config.js", "tailwind.config.js"]
+      need $ templateFiles <> cssFiles <> configFiles
       cmd_ (AddEnv "TAILWIND_MODE" "build") "pnpx postcss source/style.css -o" output
 
 showNotification built =
