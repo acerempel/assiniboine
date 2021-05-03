@@ -1,0 +1,4 @@
+packages: [build-system]
+resolver: lts-17.2
+system-ghc: true
+compiler-check: newer-minor
