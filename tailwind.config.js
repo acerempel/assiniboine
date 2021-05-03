@@ -69,6 +69,15 @@ module.exports = {
         '288': '72rem',
         'prose': 'var(--width-prose)',
       },
+      minWidth: {
+        '64': '16rem',
+        '72': '18rem',
+        '96': '24rem',
+        'prose': 'var(--width-prose)',
+      },
+      flexShrink: {
+        '2': 2,
+      },
       gridTemplateColumns: {
         'auto-2': 'auto auto',
         'w40': gridColsRepeat(10),

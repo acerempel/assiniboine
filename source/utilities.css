@@ -53,6 +53,21 @@
     padding-top: 2rem;
   }
 
+  .flex-space-x-8 {
+    margin-right: -2rem;
+    & > * { margin-right: 2rem; }
+  }
+
+  .flex-space-x-12 {
+    margin-right: -3rem;
+    & > * { margin-right: 3rem; }
+  }
+
+  .flex-space-x-16 {
+    margin-right: -4rem;
+    & > * { margin-right: 4rem; }
+  }
+
   .small-caps {
     font-family: "Cormorant SC", var(--fallback-fonts);
   }
