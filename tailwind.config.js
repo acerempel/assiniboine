@@ -75,9 +75,8 @@ module.exports = {
         '96': '24rem',
         'prose': 'var(--width-prose)',
       },
-      flexShrink: {
-        '2': 2,
-      },
+      flexShrink: { '2': 2, },
+      flexGrow: { '2': 2 },
       gridTemplateColumns: {
         'auto-2': 'auto auto',
         'w40': gridColsRepeat(10),
