@@ -1,6 +1,6 @@
 @layer components {
 
-	.entry-content {
+	.entry-content, recent-posts\.item\.content {
 		@apply text-lg space-y-1lh;
 
     p { hyphens: auto; }

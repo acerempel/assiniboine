@@ -1,0 +1,28 @@
+@layer components {
+  .recent-posts\.list {
+    @apply grid grid-cols-w72 gap-y-1.5lh gap-x-12;
+  }
+
+  .recent-posts\.item {
+    display: grid;
+    grid-template-areas: "title date" "main main";
+    grid-template-columns:
+      minmax(12rem, 2fr) minmax(4rem, 1fr);
+    @apply gap-y-0.5lh;
+  }
+
+  .recent-posts\.item\.title {
+    @apply text-xl font-medium;
+    grid-area: title;
+  }
+
+  .recent-posts\.item\.date {
+    @apply text-sm text-secondary text-right;
+    grid-area: date;
+  }
+
+  .recent-posts\.item\.content, .recent-posts\.item\.excerpt {
+    grid-area: main;
+    hyphens: auto;
+  }
+}

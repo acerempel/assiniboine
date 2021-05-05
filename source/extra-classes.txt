@@ -7,3 +7,6 @@ wp-block-latest-posts__list
 wp-block-latest-posts__post-date
 wp-block-latest-posts__post-author
 wp-block-latest-posts__post-excerpt
+recent-posts.list recent-posts.item
+recent-posts.item.title   recent-posts.item.date
+recent-posts.item.content recent-posts.item.excerpt

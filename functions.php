@@ -356,6 +356,7 @@ function twenty_twenty_one_widgets_init() {
 	);
 
 	$homepage_widget_classes = 'mb-1.5lh flex-shrink-2 flex-grow w-64';
+	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mb-0.5lh pb-0.5lh border-b border-secondary';
 
 	register_sidebar(
 		array(
@@ -364,7 +365,7 @@ function twenty_twenty_one_widgets_init() {
 			'description'   => 'Widgets added here will appear in the sidebar on your homepage.',
 			'before_widget' => '<section id="%1$s" class="' . $homepage_widget_classes . ' %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="text-2xl text-secondary font-semibold mb-0.5lh">',
+			'before_title'  => '<h2 class="' . $homepage_widget_title_classes . '">',
 			'after_title'   => '</h2>',
 		)
 	);
