@@ -359,12 +359,12 @@ function twenty_twenty_one_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => 'Home page', 'twentytwentyone',
+			'name'          => 'Home page',
 			'id'            => 'sidebar-2',
 			'description'   => 'Widgets added here will appear in the sidebar on your homepage.',
 			'before_widget' => '<section id="%1$s" class="' . $homepage_widget_classes . ' %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="text-xl text-secondary font-semibold mb-2">',
+			'before_title'  => '<h2 class="text-2xl text-secondary font-semibold mb-0.5lh">',
 			'after_title'   => '</h2>',
 		)
 	);

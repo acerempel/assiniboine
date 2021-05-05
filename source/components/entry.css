@@ -64,7 +64,7 @@
 	}
 
   .paragraphs {
-    & > * { @apply max-w-prose mx-auto; }
+    & > * { @apply max-w-prose mr-auto; }
     & > .alignwide { @apply max-w-224; }
     & > .alignfull { @apply max-w-none mx-0; }
   }
