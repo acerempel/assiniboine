@@ -355,12 +355,14 @@ function twenty_twenty_one_widgets_init() {
 		)
 	);
 
+	$homepage_widget_classes = 'mb-1.5lh flex-shrink-2 flex-grow w-64';
+
 	register_sidebar(
 		array(
 			'name'          => 'Home page', 'twentytwentyone',
 			'id'            => 'sidebar-2',
 			'description'   => 'Widgets added here will appear in the sidebar on your homepage.',
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="' . $homepage_widget_classes . ' %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="text-xl text-secondary font-semibold mb-2">',
 			'after_title'   => '</h2>',

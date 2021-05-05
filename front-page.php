@@ -13,9 +13,7 @@ get_header();
 	</section>
 
 	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<section class="mb-2lh flex-shrink-2 flex-grow min-w-64 grid grid-cols-w72 gap-y-2lh gap-x-8">
 		<?php dynamic_sidebar( 'sidebar-2' ); ?>
-	</section>
 	<?php endif; ?>
 </div>
 
