@@ -6,7 +6,7 @@
     p { hyphens: auto; }
 
 		blockquote {
-			@apply px-6 leading-4/3 text-secondary;
+			@apply px-6 leading-4/3 text-secondary space-y-0.5lh;
 		}
 
     h2 {
@@ -62,6 +62,14 @@
     }
 		.entry-content { grid-area: main }
 	}
+
+  .wp-block-quote > cite {
+    display: block;
+  }
+
+  .wp-block-column {
+    @apply space-y-1lh;
+  }
 
   .paragraphs {
     & > * { @apply max-w-prose mr-auto; }
