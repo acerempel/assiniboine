@@ -48,7 +48,9 @@
 	}
 
   .singular .entry-title {
-    @apply display text-4xl lg:text-5xl;
+    @apply
+      display font-medium
+      text-4xl lg:text-5xl;
   }
 
 	.single-post {
