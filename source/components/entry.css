@@ -3,10 +3,15 @@
 	.entry-content, recent-posts\.item\.content {
 		@apply text-lg space-y-1lh;
 
-    p { hyphens: auto; }
+    p {
+      hyphens: auto;
+      @apply max-w-prose;
+    }
 
 		blockquote {
-			@apply px-6 leading-4/3 text-secondary space-y-0.5lh;
+			@apply
+        leading-4/3 text-secondary
+        px-6 space-y-0.5lh max-w-prose;
 		}
 
     h2 {
@@ -40,7 +45,11 @@
 			text-sm text-secondary;
 	}
 
-	.singular {
+  .singular .entry-title {
+    @apply display text-4xl lg:text-5xl;
+  }
+
+	.single-post {
     main { @apply space-y-8 }
 		.entry {
 			@apply
@@ -48,9 +57,6 @@
 				grid-cols-lg lg:grid-cols-sm-lg-sm
 				justify-center;
 		}
-		.entry-title {
-      @apply display text-4xl lg:text-5xl
-    }
 		.entry-header { grid-area: header }
 		.entry-footer {
       grid-area: footer;
@@ -71,10 +77,16 @@
     @apply space-y-1lh;
   }
 
-  .paragraphs {
-    & > * { @apply max-w-prose mr-auto; }
-    & > .alignwide { @apply max-w-224; }
-    & > .alignfull { @apply max-w-none mx-0; }
+  .singular.page {
+    .entry {
+      @apply space-y-1lh;
+    }
+
+    .entry-content > *, .entry-header {
+      @apply max-w-prose mx-auto;
+    }
+    .entry-content > .alignwide { @apply max-w-224; }
+    .entry-content > .alignfull { @apply max-w-none mx-0; }
   }
 
 }
