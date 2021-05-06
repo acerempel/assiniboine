@@ -3,6 +3,8 @@
 	.entry-content, recent-posts\.item\.content {
 		@apply text-lg space-y-1lh;
 
+    hr { @apply my-1.5lh !important; }
+
     p {
       hyphens: auto;
       @apply max-w-prose;
@@ -75,6 +77,14 @@
 
   .wp-block-column {
     @apply space-y-1lh;
+    &:not(:last-child) { @apply mb-1lh; }
+  }
+  @media (min-width: 600px) {
+    .wp-block-column { @apply mb-0 !important; }
+  }
+
+  .wp-block-image {
+    @apply m-0;
   }
 
   .singular.page {
@@ -82,11 +92,15 @@
       @apply space-y-1lh;
     }
 
-    .entry-content > *, .entry-header {
-      @apply max-w-prose mx-auto;
+    .entry-header {
+      @apply max-w-224 mx-auto;
     }
-    .entry-content > .alignwide { @apply max-w-224; }
-    .entry-content > .alignfull { @apply max-w-none mx-0; }
+
+    .entry-content {
+      & > * { @apply max-w-prose mx-auto; }
+      & > .alignwide { @apply max-w-224; }
+      & > .alignfull { @apply max-w-none mx-0; }
+    }
   }
 
 }

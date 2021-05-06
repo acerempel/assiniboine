@@ -17,6 +17,10 @@
 		overflow-x: auto;
 	}
 
+  hr {
+    @apply text-secondary;
+  }
+
 	a {
 		cursor: pointer;
     color: var(--link-colour);
