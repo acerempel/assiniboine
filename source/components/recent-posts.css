@@ -1,6 +1,6 @@
 @layer components {
   .recent-posts\.list {
-    @apply grid grid-cols-w72 gap-y-1.5lh gap-x-12;
+    @apply grid grid-cols-w72 gap-y-1lh gap-x-12;
   }
 
   .recent-posts\.item {
