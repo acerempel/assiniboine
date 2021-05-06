@@ -10,7 +10,7 @@
       1fr max-content;
     grid-template-rows:
       max-content 1fr;
-    @apply gap-y-0.5lh;
+    @apply gap-y-0.5lh gap-x-4;
   }
 
   .recent-posts\.item\.title {
