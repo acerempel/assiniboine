@@ -32,12 +32,12 @@
 
 	.alignleft {
 		float: left;
-		@apply mr-2 mb-2;
+		@apply mr-6 mb-2;
 	}
 
 	.alignright {
 		float: right;
-		@apply ml-2 mb-2;
+		@apply ml-6 mb-2;
 	}
 
   .link-plain a {
