@@ -51,9 +51,11 @@ module.exports = {
         wideish: '0.0375em',
       },
       spacing: {
+        '0.25lh': '0.40625rem',
         '0.5lh': '0.8125rem',
         '0.75lh': '1.21875rem',
         '1lh': '1.625rem',
+        '1.25lh': '2.03125rem',
         '1.5lh': '2.4375rem',
         '2lh': '3.25rem',
         '128': '32rem',

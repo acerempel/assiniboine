@@ -373,6 +373,18 @@ function twenty_twenty_one_widgets_init() {
 }
 add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
 
+add_filter(
+	'widget_posts_classes',
+	function( $classes ) {
+		array_push( $classes['posts-list'], 'grid', 'grid-cols-w72', 'gap-y-1.25lh', 'gap-x-12' );
+		array_push( $classes['header'], 'flex', 'flex-wrap' );
+		array_push( $classes['title'], 'text-xl', 'font-medium', 'mr-2', 'min-w-1/2', 'flex-grow', );
+		array_push( $classes['date'], 'text-base', 'text-secondary', 'flex-shrink-0' );
+		array_push( $classes['body'], 'entry-content', 'mt-0.25lh' );
+		return $classes;
+	}
+);
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
