@@ -349,7 +349,7 @@ function twenty_twenty_one_widgets_init() {
 	);
 
 	$homepage_widget_classes = 'mb-1.5lh flex-grow w-56';
-	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mb-0.5lh pb-0.5lh border-b border-secondary';
+	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mt-0.5lh mb-1lh';
 
 	register_sidebar(
 		array(
