@@ -356,8 +356,8 @@ function twenty_twenty_one_widgets_init() {
 			'name'          => 'Home page',
 			'id'            => 'sidebar-2',
 			'description'   => 'Widgets added here will appear in the sidebar on your homepage.',
-			'before_widget' => '<section id="%1$s" class="' . $homepage_widget_classes . ' %2$s">',
-			'after_widget'  => '</section>',
+			'before_widget' => '<widget id="%1$s" class="' . $homepage_widget_classes . ' %2$s"><section>',
+			'after_widget'  => '</section></widget>',
 			'before_title'  => '<h2 class="' . $homepage_widget_title_classes . '">',
 			'after_title'   => '</h2>',
 		)
