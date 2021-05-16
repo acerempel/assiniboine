@@ -348,7 +348,7 @@ function twenty_twenty_one_widgets_init() {
 		)
 	);
 
-	$homepage_widget_classes = 'mb-1.5lh flex-shrink-2 flex-grow w-64';
+	$homepage_widget_classes = 'mb-1.5lh flex-grow w-56';
 	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mb-0.5lh pb-0.5lh border-b border-secondary';
 
 	register_sidebar(
@@ -369,11 +369,11 @@ add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
 add_filter(
 	'widget_posts_classes',
 	function( $classes ) {
-		array_push( $classes['posts-list'], 'grid', 'grid-cols-w72', 'gap-y-1.25lh', 'gap-x-12' );
+		array_push( $classes['posts-list'], 'grid', 'grid-cols-w56', 'gap-y-1.25lh', 'gap-x-12' );
 		array_push( $classes['header'], 'flex', 'flex-wrap' );
 		array_push( $classes['title'], 'text-xl', 'font-medium', 'mr-2', 'min-w-1/2', 'flex-grow', );
 		array_push( $classes['date'], 'text-base', 'text-secondary', 'flex-shrink-0' );
-		array_push( $classes['body'], 'entry-content', 'mt-0.25lh' );
+		array_push( $classes['body'], 'text-base', 'space-y-1lh', 'mt-0.25lh' );
 		return $classes;
 	}
 );
