@@ -53,6 +53,15 @@
     padding-top: 2rem;
   }
 
+  .flex-space-x-4 {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    & > * {
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+  }
+
   .flex-space-x-8 {
     margin-left: -1rem;
     margin-right: -1rem;
@@ -78,6 +87,10 @@
       margin-left: 2rem;
       margin-right: 2rem;
     }
+  }
+
+  .mx-main-content {
+    @apply mx-4 sm:mx-8 lg:mx-16;
   }
 
   .small-caps {

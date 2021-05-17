@@ -8,8 +8,6 @@
  */
 
 $wrapper_classes  = 'site-header';
-$wrapper_classes .= ' flex flex-wrap items-center';
-$wrapper_classes .= ' px-4 md:px-6 lg:px-8 py-2 lg:py-0.5lh';
 $wrapper_classes .= ' sapphire';
 $wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
 $wrapper_classes .= ( true === get_theme_mod( 'display_title_and_tagline', true ) ) ? ' has-title-and-tagline' : '';
@@ -17,8 +15,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 ?>
 
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
-
+	<div class="mx-main-content py-2 lg:py-0.5lh flex flex-wrap items-center">
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-
+	</div>
 </header><!-- #masthead -->

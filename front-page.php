@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="text-lg flex flex-wrap flex-space-x-16">
+<div class="text-lg flex flex-wrap flex-space-x-4 sm:flex-space-x-8 lg:flex-space-x-16">
 	<section class="w-128 flex-grow min-w-72 mb-1.5lh">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article class="entry-content paragraphs">
