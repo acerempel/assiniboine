@@ -1,0 +1,25 @@
+@layer components {
+  .wpforms-field:not(:last-child) {
+    @apply mb-4
+  }
+  .wpforms-field-label {
+    @apply block font-semibold mb-2
+  }
+  .wpforms-field-sublabel {
+    @apply block text-base text-secondary;
+    &.after { @apply mt-1 }
+  }
+  .wpforms-field-row {
+    @apply flex -mx-2
+  }
+  .wpforms-field-row-block {
+    @apply mx-2;
+    input { width: 100% }
+  }
+  .wpforms-submit-container {
+    @apply mt-2;
+  }
+  .wpforms-required-label {
+    @apply text-red-700;
+  }
+}
