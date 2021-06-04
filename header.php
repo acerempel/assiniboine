@@ -13,7 +13,7 @@
 
 $is_post_list = is_home() || is_archive() || is_search();
 
-$content_classes = 'mt-1lh mx-main-content';
+$content_classes = is_front_page() ? '' : 'mt-1lh mx-main-content';
 
 $main_classes = 'site-main';
 

@@ -349,7 +349,7 @@ function twenty_twenty_one_widgets_init() {
 	);
 
 	$homepage_widget_classes = 'mb-1.5lh flex-grow w-56';
-	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mt-0.5lh mb-1lh';
+	$homepage_widget_title_classes = 'text-2xl text-secondary font-semibold mt-0.5lh mb-1lh pb-0.5lh-1px border-b border-secondary';
 
 	register_sidebar(
 		array(
@@ -373,7 +373,7 @@ add_filter(
 		array_push( $classes['header'], 'flex', 'flex-wrap' );
 		array_push( $classes['title'], 'text-xl', 'font-medium', 'mr-2', 'min-w-1/2', 'flex-grow', );
 		array_push( $classes['date'], 'text-base', 'text-secondary', 'flex-shrink-0' );
-		array_push( $classes['body'], 'text-base', 'space-y-1lh', 'mt-0.25lh' );
+		array_push( $classes['body'], 'text-base', 'space-y-1lh', 'mt-0.5lh' );
 		return $classes;
 	}
 );
@@ -405,7 +405,6 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
  * @return void
  */
 function twenty_twenty_one_scripts() {
-	global $wp_scripts;
 	wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles.
