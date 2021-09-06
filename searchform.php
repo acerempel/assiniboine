@@ -23,12 +23,12 @@ $twentytwentyone_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . 
 <form
 	role="search" method="get"
 	<?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?>
-	class="search-form grid grid-cols-auto-2 gap-2"
+	class="search-form grid gap-2"
 	action="<?php echo esc_url( home_url( '/' ) ); ?>"
 >
 	<label
 		for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"
-	><?php _e( 'Search&hellip;', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+	><?php _e( 'Search this website &hellip;', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
 	<input
 		type="search" name="s"
 		id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"
@@ -36,6 +36,6 @@ $twentytwentyone_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . 
 		value="<?php echo get_search_query(); ?>" />
 	<input
 		type="submit"
-		class="search-submit col-start-2"
+		class="search-submit xs:col-start-2 justify-self-start"
 		value="<?php echo esc_attr_x( 'Search', 'submit button', 'twentytwentyone' ); ?>" />
 </form>
