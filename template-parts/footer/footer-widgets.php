@@ -10,7 +10,7 @@
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 
 	<aside class="
-		flex flex-wrap justify-between gap-y-4 gap-x-8
+		flex flex-wrap justify-between gap-y-6 gap-x-8
 		max-w-224 mx-auto">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</aside><!-- .widget-area -->
