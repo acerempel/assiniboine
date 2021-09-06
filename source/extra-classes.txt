@@ -15,3 +15,4 @@ wpforms-field-row wpforms-field-row-block
 wpforms-one-half wpforms-field-medium
 wpforms-field-container wpforms-submit-container
 wpforms-required-label
+widget_recent_entries

@@ -1,3 +1,17 @@
-widget:first-of-type {
-  @apply lg:order-first;
+@layer components {
+  widget:first-of-type {
+    @apply lg:order-first;
+  }
+
+  /* The built-in recent posts widget. */
+  .widget_recent_entries li {
+    display: grid;
+    grid-column-gap: 1.5rem;
+    @screen sm {
+      grid-template-columns: minmax(12rem,16rem) minmax(6rem,10rem);
+    }
+    a {
+      justify-self: start;
+    }
+  }
 }
