@@ -12,13 +12,13 @@
 		"@tailwindcss/forms": "^0.3.2",
 		"@wordpress/browserslist-config": "^3.0.0",
 		"autoprefixer": "^10",
-		"postcss": "^8.2.10",
+		"postcss": "^8.2.14",
 		"postcss-cli": "^8.0.0",
 		"postcss-gap-properties": "^2.0.0",
 		"postcss-import": "^14.0.1",
 		"postcss-nested": "^4.2.3",
 		"rtlcss": "^2.6.1",
-		"tailwindcss": "^2.1.1"
+		"tailwindcss": "^2.2.10"
 	},
 	"rtlcssConfig": {
 		"options": {
