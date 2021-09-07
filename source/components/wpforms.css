@@ -22,4 +22,7 @@
   .wpforms-required-label {
     @apply text-red-700;
   }
+  .wpforms-field-hp {
+    display: none;
+  }
 }
