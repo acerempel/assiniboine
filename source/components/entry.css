@@ -28,7 +28,10 @@
 	}
 
   .post-navigation {
-    @apply mx-auto max-w-prose;
+    @apply mx-auto;
+    /* Width of text column plus with of both arrows including spacing, so that
+     * they end up outside the text column. */
+    max-width: calc(var(--width-prose) + 1rem + 48px);
   }
 
 	.nav-links {
