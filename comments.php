@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 }
 
 $twenty_twenty_one_comment_count = get_comments_number();
-$comments_area_classes = 'comments-area max-w-prose border-t border-blue-800 pt-8 mx-auto';
+$comments_area_classes = 'comments-area max-w-prose border-t border-blue-800 pt-8 mt-1.5lh mx-auto';
 ?>
 
 <div id="comments" class="<?php
