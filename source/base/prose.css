@@ -1,5 +1,5 @@
 @layer base {
-	body {
+	body, .editor-styles-wrapper {
     --fallback-fonts: Garamond, Charter, Georgia, serif;
 		font-family: 'EB Garamond', var(--fallback-fonts);
 		--width-prose: 36rem;

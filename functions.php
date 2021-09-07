@@ -123,10 +123,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		$editor_stylesheet_path = './assets/css/style-editor.css';
-
 		// Enqueue editor styles.
-		add_editor_style( $editor_stylesheet_path );
+		add_editor_style( 'editor-style.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -135,19 +133,19 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				array(
 					'name'      => esc_html__( 'Extra small', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XS', 'Font size', 'twentytwentyone' ),
-					'size'      => 16,
+					'size'      => 14,
 					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => esc_html__( 'Small', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'S', 'Font size', 'twentytwentyone' ),
-					'size'      => 18,
+					'size'      => 16,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => esc_html__( 'Normal', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'M', 'Font size', 'twentytwentyone' ),
-					'size'      => 20,
+					'size'      => 18,
 					'slug'      => 'normal',
 				),
 				array(
@@ -159,13 +157,13 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				array(
 					'name'      => esc_html__( 'Extra large', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XL', 'Font size', 'twentytwentyone' ),
-					'size'      => 40,
+					'size'      => 36,
 					'slug'      => 'extra-large',
 				),
 				array(
 					'name'      => esc_html__( 'Huge', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XXL', 'Font size', 'twentytwentyone' ),
-					'size'      => 96,
+					'size'      => 52,
 					'slug'      => 'huge',
 				),
 				array(

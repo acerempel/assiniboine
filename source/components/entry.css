@@ -1,6 +1,6 @@
 @layer components {
 
-	.entry-content, recent-posts\.item\.content {
+	.entry-content, recent-posts\.item\.content, .mce-content-body, .block-editor-block-list__layout {
 		@apply text-lg space-y-1lh;
 
     hr { @apply my-1.5lh !important; }
@@ -50,7 +50,7 @@
 			text-sm text-secondary;
 	}
 
-  .singular .entry-title {
+  .singular .entry-title, .editor-post-title {
     @apply
       display font-medium
       text-4xl lg:text-5xl;
@@ -74,25 +74,6 @@
     }
 		.entry-content { grid-area: main }
 	}
-
-  .wp-block-quote > cite {
-    display: block;
-  }
-
-  .wp-block-column {
-    @apply space-y-1lh;
-    &:not(:last-child) { @apply mb-1lh; }
-  }
-  @media (min-width: 600px) {
-    .wp-block-column { @apply mb-0 !important; }
-  }
-
-  /* We don't want this to apply when there's a div.wp-block-image with a figure
-   * nested inside it with .alignright or .alignleft – we have a different rule
-   * for that. Maybe should consolidate them someday. */
-  figure.wp-block-image {
-    @apply mx-0 mb-0 mt-0.25lh;
-  }
 
   .singular.page {
     .entry {

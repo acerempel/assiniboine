@@ -27,4 +27,23 @@
       justify-items: start;
     }
   }
+  .wp-block-quote > cite {
+    display: block;
+  }
+
+  .wp-block-column {
+    @apply space-y-1lh;
+    &:not(:last-child) { @apply mb-1lh; }
+  }
+  @media (min-width: 600px) {
+    .wp-block-column { @apply mb-0 !important; }
+  }
+
+  /* We don't want this to apply when there's a div.wp-block-image with a figure
+   * nested inside it with .alignright or .alignleft – we have a different rule
+   * for that. Maybe should consolidate them someday. */
+  figure.wp-block-image {
+    @apply mx-0 mb-0 mt-0.25lh;
+  }
+
 }

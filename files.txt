@@ -28,6 +28,7 @@ single.php
 style-rtl.css
 style.css
 style.css.map
+editor-style.css
 README.md
 template-parts/content/content-excerpt.php
 template-parts/content/content-none.php

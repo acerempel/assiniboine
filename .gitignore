@@ -1,6 +1,8 @@
 node_modules/
 /style.css
+/editor-style.css
 /style.css.map
+/editor-style.css.map
 /style-rtl.css
 /assets/css/
 .ninja_log
