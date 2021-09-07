@@ -16,14 +16,18 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<div class="
-		py-6 lg:py-8 px-6 mt-8
-		teal border-t-4 border-teal-700
-	">
+	<div class="py-6 lg:py-8 px-6 mt-8
+		teal border-t-4 border-teal-700">
+
+	<div class="flex flex-wrap justify-between gap-y-6 gap-x-8
+		max-w-224 mx-auto">
 
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer
+		id="colophon"
+		class="site-footer w-full border-t border-secondary pt-6 mt-2"
+		role="contentinfo">
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
@@ -44,8 +48,7 @@
 				</ul><!-- .footer-navigation-wrapper -->
 			</nav><!-- .footer-navigation -->
 		<?php endif; ?>
-		<div class="site-info">
-			<div class="site-name">
+			<p class="site-name font-semibold">
 				<?php if ( has_custom_logo() ) : ?>
 					<div class="site-logo"><?php the_custom_logo(); ?></div>
 				<?php else : ?>
@@ -57,21 +60,27 @@
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>
-			</div><!-- .site-name -->
-			<div class="powered-by">
+			</p><!-- .site-name -->
+			<?php if ( get_theme_mod( 'display_powered_by', true ) ) : ?>
+			<p class="powered-by">
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
+					esc_html__( 'Powered by %s', 'twentytwentyone' ),
 					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
 				);
 				?>
-			</div><!-- .powered-by -->
-
-		</div><!-- .site-info -->
+			</p><!-- .powered-by -->
+			<?php endif; ?>
+			<?php if ( get_theme_mod( 'display_designer_credit', true ) ) : ?>
+				<p>
+					Website design by <a href="https://alanrempel.ca">Alan Rempel</a>
+				</p>
+			<?php endif; ?>
 	</footer><!-- #colophon -->
 
 	</div>
+</div>
 
 </div><!-- #page -->
 

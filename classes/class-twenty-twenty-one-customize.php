@@ -81,6 +81,42 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
+			$wp_customize->add_setting(
+				'display_powered_by',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_powered_by',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Display ‘Powered by Wordpress’ in the site footer', 'twentytwentyone' ),
+				)
+			);
+
+			$wp_customize->add_setting(
+				'display_designer_credit',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_designer_credit',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Credit theme designer in the site footer', 'twentytwentyone' ),
+				)
+			);
+
 			/**
 			 * Add excerpt or full text selector to customizer
 			 */
