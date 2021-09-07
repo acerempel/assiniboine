@@ -21,7 +21,7 @@ if ( $is_post_list ) {
 	$main_classes .= ' max-w-prose mx-auto';
 	$main_classes .= ' p-space-y-8 space-y-8 divide-y divide-secondary';
 } else if ( is_single() ) {
-	$main_classes .= ' space-y-8';
+	$main_classes .= ' space-y-1.5lh';
 }
 ?>
 <!doctype html>

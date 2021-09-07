@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 }
 
 $twenty_twenty_one_comment_count = get_comments_number();
-$comments_area_classes = 'comments-area max-w-prose border-t-2 border-blue-800 pt-8 mt-8 mx-auto';
+$comments_area_classes = 'comments-area max-w-prose border-t border-blue-800 pt-8 mx-auto';
 ?>
 
 <div id="comments" class="<?php
@@ -89,7 +89,7 @@ $comments_area_classes = 'comments-area max-w-prose border-t-2 border-blue-800 p
 		array(
 			'logged_in_as'       => null,
 			'title_reply'        => esc_html__( 'Leave a comment', 'twentytwentyone' ),
-			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-2xl font-medium mb-0.25lh">',
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-xl font-semibold mb-0.25lh">',
 			'title_reply_after'  => '</h2>',
 		)
 	);
