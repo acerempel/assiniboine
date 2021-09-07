@@ -9,6 +9,7 @@ wp-block-latest-posts__post-author
 wp-block-latest-posts__post-excerpt
 wp-block-columns wp-block-column wp-block-quote
 wp-block-image
+wpforms-form
 wpforms-field
 wpforms-field-label wpforms-field-sublabel
 wpforms-field-row wpforms-field-row-block
