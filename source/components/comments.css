@@ -11,12 +11,24 @@
 			grid-column: 1 / -1;
 		}
 		.comment-form-cookies-consent {
-			@apply flex-row gap-x-2 pt-5;
+			@apply flex-row gap-x-3 pt-5;
+      [type="checkbox"] {
+        @apply mt-1 sm:mt-2;
+      }
 		}
 		.comment-notes .required {
 			&::before { content: "with an asterisk (" }
 			&::after { content: ")." }
 		}
+    input:not([type="checkbox"]) {
+      max-width: 18rem;
+    }
+    textarea {
+      max-width: 18rem;
+      @screen sm {
+        max-width: none;
+      }
+    }
 	}
 
 	.comment, .comment-content, .comment-body {
