@@ -6,8 +6,7 @@
     hr { @apply my-1.5lh !important; }
 
     p {
-      hyphens: auto;
-      @apply max-w-prose;
+      @apply xs:hyphens max-w-prose;
     }
 
 		blockquote {
