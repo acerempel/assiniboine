@@ -19,6 +19,18 @@ get_header();
 		<?php dynamic_sidebar( 'sidebar-2' ); ?>
 	<?php endif; ?>
 </div>
+<?php
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post. Only visible to screen readers. */
+			esc_html__( 'Edit this page %s', 'twentytwentyone' ),
+			'<span class="sr-only">– namely, ' . get_the_title() . '</span>'
+		),
+		'<p class="edit-link">',
+		'</p>'
+	);
+?>
+
 </div>
 
 <?php endif; ?>
