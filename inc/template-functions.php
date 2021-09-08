@@ -149,7 +149,7 @@ function twenty_twenty_one_continue_reading_text() {
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
 	if ( ! is_admin() ) {
-		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
+		return ' &hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
 }
 
@@ -161,7 +161,7 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
  */
 function twenty_twenty_one_continue_reading_link() {
 	if ( ! is_admin() ) {
-		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
+		return '<p class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>';
 	}
 }
 
