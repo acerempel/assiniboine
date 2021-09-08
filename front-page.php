@@ -8,10 +8,25 @@ get_header();
 
 <div class="mt-1lh mx-main-content">
 <div class="text-lg flex flex-wrap flex-space-x-4 sm:flex-space-x-8 lg:flex-space-x-16">
-	<section class="w-128 flex-grow min-w-72 mb-1.5lh">
+	<?php
+		$display_title_setting = get_post_custom_values('Display page title');
+		if ( null !== $display_title_setting
+			&& array_key_exists(0, $display_title_setting)
+			&& 0 === strcasecmp('yes', trim($display_title_setting[0]))
+		) {
+			$display_title = true;
+		} else {
+			$display_title = false;
+		}
+	?>
+	<section class="w-128 flex-grow min-w-72 mb-1.5lh <?php if ( ! $display_title ) { echo 'mt-0.5lh'; } ?>">
 		<article class="entry-content paragraphs">
-			<?php the_title('<h1 class="text-4xl display font-semibold">', '</h1>'); ?>
-			<?php the_content(); ?>
+			<?php
+				if ( $display_title ) {
+					the_title('<h1 class="text-4xl display font-semibold">', '</h1>');
+				}
+				the_content();
+			?>
 		</article>
 	</section>
 
