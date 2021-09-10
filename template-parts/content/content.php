@@ -16,7 +16,15 @@
 		<?php if ( is_singular() ) : ?>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php else : ?>
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php
+				$prefix = '<h2 class="entry-title">';
+				$suffix = '</h2>';
+				if ( get_post_type_object( get_post_type() )->links_to_individual_pages ?? true ) {
+					$prefix .= sprintf( '<a href="%s">', esc_url( get_permalink() ) );
+					$suffix = '</a>' . $suffix;
+				}
+				the_title( $prefix, $suffix );
+			?>
 		<?php endif; ?>
 
 		<?php twenty_twenty_one_post_thumbnail(); ?>

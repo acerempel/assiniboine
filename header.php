@@ -11,15 +11,13 @@
  * @since Twenty Twenty-One 1.0
  */
 
-$is_post_list = is_home() || is_archive() || is_search();
-
 $content_classes = is_front_page() ? '' : 'mt-8 mx-main-content';
 
 $main_classes = 'site-main';
 
-if ( $is_post_list ) {
+if ( is_home() || is_search() || is_archive() ) {
 	$main_classes .= ' max-w-prose mx-auto';
-	$main_classes .= ' p-space-y-8 space-y-8 divide-y divide-secondary';
+	if ( ! is_archive() ) { $main_classes .= ' p-space-y-8 space-y-8 divide-y divide-secondary'; }
 } else if ( is_single() ) {
 	$main_classes .= ' space-y-1.5lh';
 }

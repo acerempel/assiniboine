@@ -372,9 +372,15 @@ add_filter(
 		array_push( $classes['title'], 'text-xl', 'font-medium', 'mr-2', 'min-w-1/2', 'flex-grow', );
 		array_push( $classes['date'], 'text-base', 'text-secondary', 'flex-shrink-0' );
 		array_push( $classes['body'], 'text-base', 'space-y-1lh', 'mt-0.25lh' );
+		array_push( $classes['archive-link'], 'button', 'inline-block', 'links-no-underline' );
+		array_push( $classes['archive-link-box'], 'mt-1lh' );
 		return $classes;
 	}
 );
+
+add_filter( 'get_the_archive_title_prefix', function ( $prefix ) {
+	return 'Archives:' === $prefix ? '' : $prefix;
+});
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

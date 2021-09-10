@@ -6,7 +6,14 @@ get_header();
 <?php if ( have_posts() ) : the_post(); ?>
 <?php the_post_thumbnail('full'); ?>
 
-<div class="mt-1lh mx-main-content">
+<div
+	class="mt-1lh mx-main-content"
+	style="
+		--button-colour-text: var(--link-colour);
+		--button-colour-light: var(--link-colour);
+		--button-colour-medium: #f7f5f4;
+		--button-colour-dark: var(--bg-colour-medium);
+	">
 <div class="text-lg flex flex-wrap flex-space-x-4 sm:flex-space-x-8 lg:flex-space-x-16">
 	<?php
 		$display_title_setting = get_post_custom_values('Display page title');

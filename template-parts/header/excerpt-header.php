@@ -16,7 +16,13 @@ if ( 'aside' === $post_format || 'status' === $post_format ) {
 
 <header class="entry-header">
 	<?php
-	the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
+	$prefix = '<h2 class="entry-title default-max-width">';
+	$suffix = '</h2>';
+	if ( get_post_type_object( get_post_type() )->links_to_individual_pages ?? true ) {
+		$prefix .= sprintf( '<a href="%s">', esc_url( get_permalink() ) );
+		$suffix = '</a>' . $suffix;
+	}
+	the_title( $prefix, $suffix );
 	twenty_twenty_one_post_thumbnail();
 	?>
 </header><!-- .entry-header -->

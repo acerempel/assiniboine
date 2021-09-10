@@ -111,4 +111,18 @@
 
   .links-no-underline { --link-text-decoration: none; }
   .links-underline { --link-text-decoration: underline; }
+
+  .button {
+    @apply
+      px-3.5 py-1.5 rounded
+      border
+      font-medium;
+    color: var(--button-colour-text);
+    border-color: var(--button-colour-light);
+    background-color: var(--button-colour-medium);
+    &:focus { @apply outline-button; }
+    &:active {
+      background-color: var(--button-colour-dark);
+    }
+  }
 }
