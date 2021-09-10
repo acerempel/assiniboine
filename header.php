@@ -17,7 +17,6 @@ $main_classes = 'site-main';
 
 if ( is_home() || is_search() || is_archive() ) {
 	$main_classes .= ' max-w-prose mx-auto';
-	if ( ! is_archive() ) { $main_classes .= ' p-space-y-8 space-y-8 divide-y divide-secondary'; }
 } else if ( is_single() ) {
 	$main_classes .= ' space-y-1.5lh';
 }
