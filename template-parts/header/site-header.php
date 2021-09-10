@@ -15,7 +15,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 ?>
 
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
-	<div class="mx-main-content py-2 lg:py-0.5lh flex flex-wrap items-center">
+	<div class="mx-main-content py-2 lg:py-0.5lh flex flex-wrap items-center justify-center">
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
 	</div>

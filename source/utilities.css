@@ -125,4 +125,19 @@
       background-color: var(--button-colour-dark);
     }
   }
+
+  .ornament-right::after { content: var(--ornament); }
+  .ornament-left::before { content: var(--ornament); }
+
+  .ornaments-diamond {
+    --ornament: '◆';
+  }
+  .ornaments-none {
+    --ornament: none;
+  }
+
+  .ornaments-x > :not([hidden]) ~ :not([hidden])::before {
+    content: var(--ornament);
+  }
+
 }

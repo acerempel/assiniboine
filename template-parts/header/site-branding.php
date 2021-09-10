@@ -19,7 +19,7 @@ $header_class .= ' text-3xl lg:text-4xl text-secondary';
 	<div class="site-logo"><?php the_custom_logo(); ?></div>
 <?php endif; ?>
 
-<div class="site-branding display pl-1 pr-12 mb-1.5">
+<div class="site-branding display pl-1 pr-12 mb-1.5 mr-auto">
 
 	<?php if ( has_custom_logo() && ! $show_title ) : ?>
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
