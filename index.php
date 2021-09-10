@@ -22,21 +22,22 @@ if ( is_home() ) : ?>
 	</header><!-- .page-header -->
 <?php endif;
 
-if ( have_posts() ) {
+if ( have_posts() ) { ?>
+	<div class="p-space-y-8 space-y-8 divide-y divide-secondary">
 
-	?><div class="p-space-y-8 space-y-8 divide-y divide-secondary"><?php
+	<?php
 	// Load posts loop.
 	while ( have_posts() ) {
 		the_post();
-
 		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
 	}
-	?></div><?php
+	?>
 
-	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+	<?php twenty_twenty_one_the_posts_navigation(); ?>
 
-} else {
+	</div>
+
+	<?php } else {
 
 	// If no content, include the "No posts found" template.
 	get_template_part( 'template-parts/content/content-none' );

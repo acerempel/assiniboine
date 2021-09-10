@@ -16,7 +16,7 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<div class="py-6 lg:py-8 px-6 mt-8
+	<div class="py-6 lg:py-8 px-6 mt-12
 		teal border-t-4 border-teal-700">
 
 	<div class="flex flex-wrap justify-between gap-y-6 gap-x-8
