@@ -1,10 +1,14 @@
 @layer base {
-	body, .editor-styles-wrapper {
+	body, .editor-styles-wrapper, .wp-editor {
     --fallback-fonts: Garamond, Charter, Georgia, serif;
 		font-family: 'EB Garamond', var(--fallback-fonts);
 		--width-prose: 36rem;
     @apply grey links-underline;
 	}
+  
+  .wp-editor {
+    @apply m-6;
+  }
 
 	b, strong { font-weight: 700; }
 
@@ -17,8 +21,8 @@
 		overflow-x: auto;
 	}
 
-  hr {
-    @apply text-secondary;
+  hr, .wp-block-separator {
+    @apply border-secondary border-t border-b-0;
   }
 
 	a {

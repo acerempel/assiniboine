@@ -40,6 +40,10 @@
 		@apply ml-6 my-2;
 	}
 
+  .aligncenter {
+    @apply px-3 my-2;
+  }
+
   .link-plain a {
     text-decoration: none;
     color: currentColor;

@@ -14,6 +14,12 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
+$google_fonts_url = 'https://fonts.googleapis.com/css2';
+$google_fonts_url .= '?family=EB+Garamond:ital,wght@0,400..600;1,400';
+$google_fonts_url .= '&family=Cormorant+Garamond:wght@400;500;600;700';
+$google_fonts_url .= '&family=Cormorant+SC:wght@400;500;600;700';
+$google_fonts_url .= '&display=swap';
+
 if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -27,6 +33,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_setup() {
+		global $google_fonts_url;
+
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -125,6 +133,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		// Enqueue editor styles.
 		add_editor_style( 'editor-style.css' );
+		add_editor_style( $google_fonts_url );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -409,16 +418,11 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
  * @return void
  */
 function twenty_twenty_one_scripts() {
+	global $google_fonts_url;
 	wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles.
 	wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
-
-	$google_fonts_url = 'https://fonts.googleapis.com/css2';
-	$google_fonts_url .= '?family=EB+Garamond:ital,wght@0,400..600;1,400';
-	$google_fonts_url .= '&family=Cormorant+Garamond:wght@400;500;600;700';
-	$google_fonts_url .= '&family=Cormorant+SC:wght@400;500;600;700';
-	$google_fonts_url .= '&display=swap';
 
 	// Fonts.
 	wp_enqueue_style(

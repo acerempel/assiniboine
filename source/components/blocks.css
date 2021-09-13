@@ -39,11 +39,19 @@
     .wp-block-column { @apply mb-0 !important; }
   }
 
+  .wp-block-image:last-child {
+    @apply mb-0;
+  }
+
   /* We don't want this to apply when there's a div.wp-block-image with a figure
    * nested inside it with .alignright or .alignleft – we have a different rule
    * for that. Maybe should consolidate them someday. */
   figure.wp-block-image {
-    @apply mx-0 mb-0 mt-0.25lh;
+    @apply mx-0 mb-0 my-0.25lh;
+  }
+
+  .wp-block-image figure {
+    @apply my-0.25lh;
   }
 
 }

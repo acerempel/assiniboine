@@ -1,4 +1,4 @@
-alignleft alignright
+alignleft alignright aligncenter
 meta-nav screen-reader-text svg-icon post-title
 nav-previous nav-next nav-links post-navigation
 children comment-meta comment-metadata
@@ -8,7 +8,7 @@ wp-block-latest-posts__post-date
 wp-block-latest-posts__post-author
 wp-block-latest-posts__post-excerpt
 wp-block-columns wp-block-column wp-block-quote
-wp-block-image
+wp-block-image wp-block-separator
 wpforms-form
 wpforms-field
 wpforms-field-label wpforms-field-sublabel
@@ -18,3 +18,7 @@ wpforms-field-container wpforms-submit-container
 wpforms-required-label
 wpforms-field-hp
 widget_recent_entries
+mce-content-body wp-editor wp-block
+wp-block-freeform block-library-rich-text__tinymce
+edit-post-visual-editor__post-title-wrapper editor-post-title
+editor-post-title__input

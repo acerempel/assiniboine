@@ -1,5 +1,27 @@
 @layer components {
 
+  .wp-block-freeform.block-library-rich-text__tinymce {
+    li, p {
+      line-height: inherit;
+    }
+    blockquote {
+      @apply border-l-0;
+    }
+  }
+
+  .wp-block.wp-block-freeform,
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title {
+    @apply mx-auto max-w-prose;
+  }
+
+  .wp-block {
+    @apply my-1lh;
+  }
+
+  .wp-editor.mce-content-body > * {
+    @apply mx-auto max-w-prose;
+  }
+
 	.entry-content, recent-posts\.item\.content, .mce-content-body, .block-editor-block-list__layout {
 		@apply text-lg space-y-1lh;
 
@@ -49,7 +71,7 @@
 			text-sm text-secondary;
 	}
 
-  .singular .entry-title, .editor-post-title {
+  .singular .entry-title, .editor-post-title .editor-post-title__input {
     @apply
       display font-medium
       text-4xl lg:text-5xl;
